@@ -1,2 +1,1 @@
-# bhajan_sangraha
-Bhajan app
+# bhajan_sangraha_app

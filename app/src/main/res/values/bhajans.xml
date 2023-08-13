@@ -1,0 +1,1583 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="zero_ganapati">
+        <item></item>
+    <item>गणपति भक्त लगाउ पार</item>
+    <item>बिनायक भक्त लगाउ पार</item>
+    <item></item>
+        <item></item>
+    <item>आदि चराचर प्रभुको नाम</item>
+    <item>भक्त उतार्ने हजुरको काम</item>
+    <item>हजुरनै जगतका सार</item>
+    <item>गणपति भक्त .......!!</item>
+    <item> </item>
+        <item></item>
+    <item>नाम बिना तिम्रो झुटो छ पुजन्</item>
+    <item>ज्ञान बिना तिम्रो झुटो छ अर्पण</item>
+    <item>झुटो छ यो संसार</item>
+    <item>गणपति भक्त .......!!</item>
+    <item> </item>
+        <item></item>
+    <item>दुःखको सागर पौडि रहेछौ</item>
+    <item>अन्तर खोलि तिम्रै नाम जप्छौ</item>
+    <item>तिमी नै पालन हार</item>
+        <item>गणपति भक्त .......!!</item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+    <string-array name="one_govinda">
+        <item></item>
+        <item>गोविन्द जय जय, गोपाल जय जय ।</item>
+        <item>राधा रमण हरि गोविन्द जय जय ।।</item>
+        <item></item>
+        <item></item>
+        <item>ब्रम्हा कि जय जय विष्णु कि जय जय ।</item>
+        <item>कैलाश पति शिव शैकर कि जय जय ।।</item>
+        <item>गोविन्द जय जय .......... ।।।</item>
+        <item></item>
+        <item></item>
+        <item>गंगाकि जय जय यमुना कि जय जय ।</item>
+        <item>सरस्वती श्री वेंणु कि जय जय ।।</item>
+        <item>गोविन्द जय जय .......... ।।।</item>
+        <item></item>
+        <item></item>
+        <item>राधा कि जय जय लक्ष्मी कि जय जय ।</item>
+        <item>मोरे मुकुट वंशी वालेकि जय जय ।।</item>
+        <item>गोविन्द जय जय .......... ।।।</item>
+        <item></item>
+        <item></item>
+        <item>श्री रामकि जय जय सिताकि जय जय ।</item>
+        <item>दशरथ कुमार चारौं भैया ओकि जय जय ।।</item>
+        <item>गोविन्द जय जय .......... ।।।</item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+
+
+    <string-array name="two_nachhe_krishna_jee">
+        <item></item>
+    <item>नाँचे कृष्णजी छमछम नाँचे कृष्णजी,</item>
+    <item>वृन्दावनमा गाई चराउँदै नाँचे कृष्णजी ।</item>
+    <item></item>
+        <item></item>
+    <item>बलरामका भाइ कृष्ण यसोदाका नानी,</item>
+    <item>गोपीहरुका घर घर गई दही चोर्ने बानी ।</item>
+    <item>नाँचे कृष्णजी .......... ।।</item>
+    <item></item>
+        <item></item>
+    <item>गोपीहरु गित गाउँछन ग्वालाहरु झ्याली,</item>
+    <item>यसोदाजी दंग पर्छिन नन्दबाबा ताली ।</item>
+    <item>नाँचे कृष्णजी .......... ।।</item>
+    <item></item>
+        <item></item>
+    <item>शिव नारद छक्क परे व्रम्हा मोहित भए,</item>
+    <item>वृन्दावनमा ईन्द्र कुबेर दर्शन गर्न आए ।</item>
+    <item>नाँचे कृष्णजी .......... ।।</item>
+        <item></item>
+        <item></item>
+</string-array>
+
+    <string-array name="three_krishna_gaye_banaima">
+        <item></item>
+    <item>( कृष्ण गए बनैमा राधिकालाई सम्झि मनैमा )2</item>
+        <item></item>
+        <item></item>
+        <item>भाद्र महिना जन्म तिथि, अष्टमीको रातमा,</item>
+        <item>जेल भित्र जन्मनु भो स्वयम् परमात्मा ।</item>
+        <item>कृष्ण गए बनैमा .......... ।।</item>
+        <item></item>
+        <item></item>
+        <item>देवकीले जन्म दिईन यशोदाले पालिन,</item>
+        <item>राधा आई कृष्णसँग माया लाउन थालिन ।</item>
+        <item>कृष्ण गए बनैमा .......... ।।</item>
+        <item></item>
+        <item></item>
+        <item>सोर्ह सय गोपिनीका सोर्ह सय साडी,</item>
+        <item>साना साना कृष्णजीलाई पुगिहाल्यो भारि ।</item>
+        <item>कृष्ण गए बनैमा .......... ।।</item>
+        <item></item>
+        <item></item>
+        <item>राधा कुण्ड श्याम कुण्ड गिरी गोवर्धन,</item>
+        <item>मधुर मधुर बंशी बज्यो सोही वृन्दावन ।</item>
+        <item>कृष्ण गए बनैमा .......... ।।</item>
+        <item></item>
+        <item></item>
+</string-array>
+
+<string-array name="four_pau_sadhaivari_mangala_gauna">
+    <item></item>
+    <item>पाउँ सँधैभरी मंगल गाउन,</item>
+    <item>जय यतिराज जय भगवान ।।</item>
+    <item></item>
+    <item></item>
+    <item>जय योगी पति जय गोपी पति,</item>
+    <item>राधा पति हे जय भगवान ।।</item>
+    <item></item>
+    <item></item>
+    <item>जय शिताम्वर जय पिताम्वर,</item>
+    <item>काशाम्वर हे जय भगवान ।।</item>
+    <item></item>
+    <item></item>
+    <item>जय गिरी धारी जय वनमाली,</item>
+    <item>मुरली धर हे जय भगवान ।।</item>
+    <item>पाउँ सँधै भरि .......... ।।।</item>
+    <item></item>
+    <item></item>
+    <item>जय कमलासन जय पद्मासन,</item>
+    <item>रुकमा पति हे जय भगवान ।।</item>
+    <item></item>
+    <item></item>
+    <item>कानमा कुण्डल पङ्कजमाला,</item>
+    <item>कौस्तुभ मणिको हार गलामा ।।</item>
+    <item>कंकण भूषण छमछम पारी,</item>
+    <item>वृन्दावन बिच श्याम मुरारी ।।</item>
+    <item>पाउँ सँधै भरी .......... ।।।</item>
+    <item></item>
+    <item></item>
+</string-array>
+
+    <string-array name="five_aauna_sakhi_fulbarima">
+        <item></item>
+    <item>आउन सखि फुलबारीमा फुल टिप्न जाउँ ।</item>
+        <item>जाई बेलि चमेलिको माला बनाउँ ।।</item>
+        <item>कृष्णजीको गलामा सुन्दर माला ।</item>
+        <item>उनेर हामी लाईदिउँला ।।</item>
+        <item></item>
+        <item></item>
+        <item>बेलपत्र टिप्नलाई बेलघारीमा जाउँ ।</item>
+        <item>तिनपाते बेलपातिको माला बनाउँ ।।</item>
+        <item>शंकरजीको गलामा सुन्दर माला ।</item>
+        <item>उनेर हामी लाईदिउँला ।।</item>
+        <item>आउन सखि .......... ।।।</item>
+        <item></item>
+        <item></item>
+        <item>साधुसन्त पुजारीलाई रुद्राक्षको माला ।</item>
+        <item>एकसय आठ गनी उनेर ल्याउँला ।।</item>
+        <item>जप्नेछन साधुले गनेर,</item>
+        <item>ॐ नमो शिवाय भनेर ।।</item>
+        <item>आउन सखि .......... ।।।</item>
+        <item></item>
+        <item></item>
+        <item>तुलसीको माला उनी नारायणलाई लाउँला ।</item>
+        <item>गणेशजीलाई दुबोको माला वनाउँला ।।</item>
+        <item>अर्घ चढाउँला सुर्यलाई,</item>
+        <item>गंगामा गएर नुहाई ।।</item>
+        <item>आउन सखि .......... ।।।</item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+    <string-array name="six_mathura_khoje">
+        <item></item>
+        <item>मथुरा खोजेँ गोकुल खोजेँ, खोजे नि वृन्दावन ।</item>
+        <item>सारामा संसार खोजिमा सकेँ कृष्णजी कहाँ छन् ।।</item>
+        <item>कृष्णजी कहाँछन् ए गोरि राधा, कृष्णजी कहाँछन् ।।।</item>
+        <item>मथुरा खोजेँ ............।।।।</item>
+        <item></item>
+        <item></item>
+        <item>पानिलाई खानु यमुनाजीको, नखानु कुँवाको ।</item>
+        <item>शिरैमा मुकुट बैजयन्ती माला, क्याराम्रो सुहाको ।।</item>
+        <item>क्याराम्रो सुहाको ए गोरि राधा क्याराम्रो सुहाको ।।।</item>
+        <item>मथुरा खोजेँ ............।।।।</item>
+        <item></item>
+        <item></item>
+        <item>ढक्कलाई मक्क फुललाई फुल्यो कृष्णको बारीमा ।</item>
+        <item>हरिलाई अर्चन गरौन सखि फुल ल्याउन डालीमा ।।</item>
+        <item>फुल ल्याउन डालिमा ए गोरि राधा फुल ल्याउन डालिमा ।।।</item>
+        <item>मथुरा खोजेँ ............।।।।</item>
+        <item></item>
+        <item></item>
+        <item>भदौको महिना अष्टमी तिथि, त्यो मध्य रातैमा ।</item>
+        <item>झ्यालखाना भित्र आउनु भो हरि, देबिको साथैमा ।।</item>
+        <item>देबिको साथैमा ए गोरि राधा देबिको साथैमा ।।।</item>
+        <item>मथुरा खोजेँ ............।।।।</item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+    <string-array name="seven_khoju_ma_timilai_kaha">
+        <item></item>
+        <item>खोजुँ म तिमीलाई कहाँ मुरलीवाले, खोजुँ म तिमीलाई कहाँ ।</item>
+    <item></item>
+        <item></item>
+        <item>आकाशमा खोजेँ पातालमा खोजेँ,,</item>
+        <item>धर्तीमा तिम्रो निवास मुरलीवाले, खोजुँ म तिमीलाई कहाँ ।।</item>
+        <item>खोजुँ म तिमीलाई ......... ।।।</item>
+        <item></item>
+        <item></item>
+        <item>रुखमा खोजेँ पातमा खोजेँ,,</item>
+        <item>फुलमा तिम्रो निवास मुरलिवाले, खोजुँ म तिमीलाई कहाँ ।।</item>
+        <item>खोजुँ म तिमीलाई ......... ।।।</item>
+        <item></item>
+        <item></item>
+        <item>मन्दिरमा खोजेँ मुर्तिमा खोजेँ,,</item>
+        <item>आत्मामा तिम्रो निवास मुरलिवाले, खोजुँ म तिमीलाई कहाँ ।।</item>
+        <item>खोजुँ म तिमीलाई ......... ।।।</item>
+        <item></item>
+        <item></item>
+        <item>गंगामा खोजेँ यमुनामा खोजेँ,,</item>
+        <item>सागरमा तिम्रो निवास मुरलिवाले, खोजुँ म तिमीलाई कहाँ ।।</item>
+        <item>खोजुँ म तिमीलाई ......... ।।।</item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+<string-array name="eight_sunana_sakhi_pyari">
+    <item></item>
+    <item>सुनन सखि प्यारी के मधुरो वंशी बनमा ।</item>
+    <item>रनन धुन सुन्दा रंग चढ्यो मीठो मनमा ।।</item>
+    <item></item>
+    <item></item>
+    <item>जुनेलि रात राधाज्युका साथ,,</item>
+    <item>श्याम पुगे वृन्दावनमा ।।</item>
+    <item>सुनन सखी प्यारी ........... ।।।।</item>
+    <item></item>
+    <item></item>
+    <item>अनहद नाद हटाई विषाद,,</item>
+    <item>रास रच्यौ वृन्दावनमा ।।</item>
+    <item>सुनन सखी प्यारी ........... ।।।।</item>
+    <item></item>
+    <item></item>
+    <item>देवता आए खुशीले रमाए,,</item>
+    <item>मग्न भए वृन्दावनमा ।।</item>
+    <item>सुनन सखी प्यारी ........... ।।।।</item>
+    <item></item>
+    <item></item>
+    <item>गोपिनी बन्दै शिव आए रम्दै,,</item>
+    <item>नाच्न लागे वृन्दावनमा ।।</item>
+    <item>सुनन सखी प्यारी ........... ।।।।</item>
+    <item></item>
+    <item></item>
+    <item>मानौन बात जाउन तिनका साथ,,</item>
+    <item>हामी पनि वृन्दावनमा ।।</item>
+    <item>सुनन सखी प्यारी ........... ।।।।</item>
+    <item></item>
+    <item></item>
+</string-array>
+
+    <string-array name="nine_shyama_le_badana_ghumriyeko_bal">
+        <item></item>
+        <item>श्यामले बदन घुम्रिएको बाल ।</item>
+        <item>मोहन मुरली छकम छकम चाल ।।</item>
+    <item></item>
+        <item></item>
+        <item>आउ बस कृष्णजी मनको माझैमा ।</item>
+        <item>नजाउ छोडि हामीलाई बनको साँझैमा ।।</item>
+        <item>माई यसोदाका छोरा तिमी नन्दलाल ।</item>
+        <item>मोहन मुरली छकम छकम चाल ।।</item>
+    <item>श्यामले .................. ।।।</item>
+    <item></item>
+        <item></item>
+    <item>त्यो तिम्रो मुरलीले मनै भुलायो ।</item>
+    <item>अन्तर गगनमा चन्द्र उदायो ।।</item>
+    <item>त्यो कोमल नयनमा सरोवर ताल ।</item>
+    <item>मोहन मुरली छकम छकम चाल ।।</item>
+    <item>श्यामले .................. ।।।</item>
+    <item></item>
+        <item></item>
+    <item>लिलाले जगतमा घुम्दै घर घर ।</item>
+    <item>जगतका प्राणीमा हरी बराबर ।।</item>
+    <item>हे कृष्ण बिचित्र छ मायारुपि जाल ।</item>
+    <item>मोहन मुरली छकम छकम चाल ।।</item>
+    <item>श्यामले .................. ।।।</item>
+    <item></item>
+        <item></item>
+    <item>अक्कासुर बक्कासुर ध्यानुकासुर ।</item>
+    <item>मै हुँ भन्ने असुरलाई पार्यौ चक्नाचुर ।।</item>
+    <item>ति दुष्ट राक्षसले धेरै गरे जाल ।</item>
+    <item>मोहन मुरली छकम छकम चाल ।।</item>
+    <item>श्यामले .................. ।।।</item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+    <string-array name="ten_brindabana_sahara_banera_hoki">
+        <item></item>
+        <item>वृन्दावन शहर बनेर होकि ।</item>
+        <item>यमुनाको लहर सुकेर होकि ।।</item>
+        <item>राधे कृष्ण अझै आएनन् किन हो वृन्दावनैमा ।।।</item>
+        <item></item>
+        <item></item>
+        <item>लक्ष्मीजीले नजानु भनेर होकि ।</item>
+        <item>माखन मिश्री नखानु भनेर होकि ।।</item>
+        <item>राधे कृष्ण .............. ।।।</item>
+        <item></item>
+        <item></item>
+        <item>गोकुलमा गोरस छैन र होकि ।</item>
+        <item>वृन्दावनमा गोपिनी छैनन् र होकि ।।</item>
+        <item>राधे कृष्ण .............. ।।।</item>
+        <item></item>
+        <item></item>
+        <item>ईन्द्र लोकमा शंकट परेर होकि ।</item>
+        <item>कलियुगमा पापीले रोकेर होकि ।।</item>
+        <item>राधे कृष्ण .............. ।।।</item>
+        <item></item>
+        <item></item>
+        <item>भक्ति भाव भजन छोडेर होकि ।</item>
+        <item>ग्वालाहरु शहर पसेर होकि ।।</item>
+        <item>राधे कृष्ण .............. ।।।</item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+<string-array name="eleven_tardaxau_sara_jamana">
+    <item></item>
+    <item>तार्दछौ सारा जमाना, प्रभु हामीलाई पनि तारन ।</item>
+    <item></item>
+    <item></item>
+    <item>मैले सुने तिमीले प्रल्हादलाई तार्यौ ।</item>
+    <item>प्रल्हादलाई तार्यौ प्रभु प्रल्हादलाई तार्यौ ।।</item>
+    <item>खम्बाको गरि बहाना, प्रभु हामीलाई पनि तारन ।।।</item>
+    <item>तार्दछौ सारा ............. ।।।।</item>
+    <item></item>
+    <item></item>
+    <item>मैले सुने तिमीले द्रोपदीलाई तार्यौ ।</item>
+    <item>द्रौपदीलाई तार्यौ प्रभु द्रौपदीलाई तार्यौ ।।</item>
+    <item>सारीको गरि बहाना, प्रभु हामीलाई पनि तारन ।।।</item>
+    <item>तार्दछौ सारा ............. ।।।।</item>
+    <item></item>
+    <item></item>
+    <item>मैले सुने तिमीले कुब्जालाई तार्यौ ।</item>
+    <item>कुब्जालाई तार्यौ प्रभु कुब्जालाई तार्यौ ।।</item>
+    <item>चन्दनको गरि बहाना, प्रभु हामीलाई पनि तारन ।।।</item>
+    <item>तार्दछौ सारा ............. ।।।।</item>
+    <item></item>
+    <item></item>
+    <item>मैले सुने तिमीले अर्जुनलाई तार्यौ ।</item>
+    <item>अर्जुनलाई तार्यौ प्रभु अर्जुनलाई तार्यौ ।।</item>
+    <item>गिताको गरि बहाना, प्रभु हामीलाई पनि तारन ।।।</item>
+    <item>तार्दछौ सारा ............. ।।।।</item>
+    <item></item>
+    <item></item>
+    <item>मैले सुने तिमीले परिक्षितलाई तार्यौ ।</item>
+    <item>परिक्षितलाई तार्यौ प्रभु परिक्षितलाई तार्यौ ।।</item>
+    <item>भागवतको गरि बहाना, प्रभु हामीलाई पनि तारन ।।।</item>
+    <item>तार्दछौ सारा ............. ।।।।</item>
+    <item></item>
+    <item></item>
+    <item>मैले सुने तिमीले भक्तलाई तार्यौ ।</item>
+    <item>भक्तलाई तार्यौ प्रभु भक्तलाई तार्यौ ।।</item>
+    <item>किर्तनको गरि बहाना, प्रभु हामीलाई पनि तारन ।।।</item>
+    <item>तार्दछौ सारा ............. ।।।।</item>
+    <item></item>
+    <item></item>
+</string-array>
+
+
+<string-array name="twelve_krishna_murari">
+    <item></item>
+    <item>कृष्ण मुरारी, मधुर मधुर वंशी बज्यो कहाँ छौ हरि ।</item>
+    <item></item>
+    <item></item>
+    <item>खोज्छौ हामी वृन्दावनमा कुञ्ज कुञ्ज हेरि ।</item>
+    <item>राधाजीले बोलाउँछिन भाका फेरि फेरि ।।</item>
+    <item>कृष्ण मुरारी ............ ।।।</item>
+    <item></item>
+    <item></item>
+    <item>रास गर्दा गर्दै कृष्ण अलप भई गए ।</item>
+    <item>अलपत्र भई गोपी कृष्ण खोज्न थाले ।।</item>
+    <item>कृष्ण मुरारी ............ ।।।</item>
+    <item></item>
+    <item></item>
+    <item>गाई बाच्छा कराउँछन कृष्ण नदेखेर ।</item>
+    <item>रुख पात मौन भए कृष्ण नभेटेर ।।</item>
+    <item>कृष्ण मुरारी ............ ।।।</item>
+    <item></item>
+    <item></item>
+    <item>दर्शन दिनुहोस कृष्ण अब बिन्ति यहि गर्छौ ।</item>
+    <item>बन्दना छ कृष्ण प्रभु सरणमा पर्छौ ।।</item>
+    <item>कृष्ण मुरारी ............ ।।।</item>
+    <item></item>
+    <item></item>
+</string-array>
+
+    <string-array name="thirteen_aauna_krishna_darshana_deuna">
+        <item></item>
+        <item>आउन कृष्ण दर्शन देउन ।</item>
+        <item>भक्तजनको पुकार सुनन ।।</item>
+        <item></item>
+        <item></item>
+        <item>कृष्णजिले बाँसुरि बजाउने,,</item>
+        <item>गोपिनिको मनै भुलाउने ।।।</item>
+        <item>आउन कृष्ण............ ।।।।</item>
+        <item></item>
+        <item></item>
+        <item>कृष्णजिको बाँसुरि मुखैमा,,</item>
+        <item>राधा भुँईमा कृष्ण रुखैमा।।</item>
+        <item>आउन कृष्ण............ ।।।।</item>
+        <item></item>
+        <item></item>
+        <item>नौनि चोरि आमालाई सताउने,,</item>
+        <item>बाँध्न जाँदा शरीर बढाउने ।।</item>
+        <item>आउन कृष्ण............ ।।।।</item>
+        <item></item>
+        <item></item>
+        <item>कृष्ण अघि अर्जुनजि पछाडि,,</item>
+        <item>राधा बिचमा मधुबनैमा ।।</item>
+        <item>आउन कृष्ण............ ।।।।</item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+    <string-array name="fourteen_muktinath_gandaki_damodar_kunda">
+    <item></item>
+    <item>मुक्तिनाथ गण्डकी दामोदर कुण्ड ।</item>
+    <item>शालीग्राम भगवान लानुस बैकुण्ठ ।।</item>
+    <item></item>
+    <item></item>
+    <item>नारायण जप्ने गरौ नाम हरिको ।</item>
+    <item>पाउँछ मुक्ति तर्छ भव जप्ने गर्छ जो ।।</item>
+    <item>मुक्तिनाथ गण्डकी ............. ।।।</item>
+    <item></item>
+    <item></item>
+    <item>नारायण नारायण जपौ हरि नाम ।</item>
+    <item>हरि हरि जप्दै भक्त भव पार जाम् ।।</item>
+    <item>मुक्तिनाथ गण्डकी ............. ।।।</item>
+    <item></item>
+    <item></item>
+    <item>राम भन भक्तजन प्यारो हरि नाम ।</item>
+    <item>नारायण नाम जप्दै भव पार जाम ।।</item>
+    <item>मुक्तिनाथ गण्डकी ............. ।।।</item>
+    <item></item>
+    <item></item>
+    </string-array>
+
+
+    <string-array name="fifteen_kailash_main_basne">
+        <item></item>
+        <item>कैलाशमा बस्ने, खरानी धस्ने, डमरु बजाउने ।</item>
+        <item>गलामा सर्प, शिरमा जट्टा क्या राम्रो सुहाउने ।।</item>
+        <item>झट्ट लट्टा कोरन शिवजी, नन्दि चढि जाउँला कैलाशमा ।।।</item>
+    <item></item>
+    <item></item>
+        <item>छेउमा साँढे, शिरमा गंगा गणेशजी काखैमा ।</item>
+        <item>त्यो तिम्रो रुप अति नै राम्रो कैलाश पाखैमा ।।</item>
+        <item>झट्ट लट्टा ............. ।।।</item>
+    <item></item>
+    <item></item>
+        <item>कालकुट बीस पान गरेर बचायौ संसार ।</item>
+        <item>भक्तका प्यारा जप्ने छौ सारा, बम भोले शंकर ।।</item>
+        <item>झट्ट लट्टा ............. ।।।</item>
+    <item></item>
+    <item></item>
+    </string-array>
+
+
+    <string-array name="sixteen_kati_ramro_shree_brindabana">
+    <item></item>
+        <item>कति राम्रो श्री वृन्दावन, सललल बगेकि यमुना ।</item>
+        <item>उस्तै राम्रो मथुरा शहर, जान मलाई लाग्दैछ रहर ।।</item>
+    <item></item>
+    <item></item>
+        <item>वृन्दावनको झिलिमिली कृष्णजीको दर्शन ।</item>
+        <item>कृष्णजीको दर्शन गर्ने पापी पार तर्छन् ।।</item>
+        <item>कति राम्रो ............... ।।।</item>
+    <item></item>
+    <item></item>
+        <item>पहिलो दर्शन बिहारीको पछि रङ्गनाथ ।</item>
+        <item>यमुनामा स्नान गर्नु अति भक्ति साथ ।।</item>
+        <item>कति राम्रो ............... ।।।</item>
+    <item></item>
+    <item></item>
+        <item>राधा कुण्ड श्याम कुण्ड गिरी गोबर्धन ।</item>
+        <item>मधुर मधुर वंशी बज्यो सोही वृन्दावन ।।</item>
+        <item>कति राम्रो ............... ।।।</item>
+    <item></item>
+    <item></item>
+        <item>यमुनाको निलो जल कृष्ण नुहाउने ।</item>
+        <item>हातमा वंशी शिरमा मुकुट कति सुहाउने ।।</item>
+        <item>कति राम्रो ............... ।।।</item>
+    <item></item>
+    <item></item>
+        <item>गाई बाच्छा लिई प्रभु जान्थे बन बन ।</item>
+        <item>गोपिनीको प्रेम ठूलो रुन्थे मनमन ।।</item>
+        <item>कति राम्रो ............... ।।।</item>
+    <item></item>
+    <item></item>
+    </string-array>
+
+
+
+    <string-array name="seventeen_om_namo_bhagwate">
+    <item></item>
+        <item>(ॐ नमो भगवते वासुदेवाय)2</item>
+        <item>(वासुदेवाय भज वासुदेवाय)2</item>
+        <item>ॐ नमो..........</item>
+    <item></item>
+    <item></item>
+        <item>नारदले ध्रवलाई यहि ज्ञान बताए,</item>
+        <item>यहि ज्ञान बताए प्रभु यहि ज्ञान बताए ।</item>
+        <item>ॐ नमो..........</item>
+    <item></item>
+    <item></item>
+        <item>ब्यासले शुक्रलाई यहि ज्ञान बताए,</item>
+        <item>यहि ज्ञान बताए प्रभु यहि ज्ञान बताए ।</item>
+        <item>ॐ नमो..........</item>
+    <item></item>
+    <item></item>
+        <item>नारदले प्रल्हादलाई यहि ज्ञान बताए,</item>
+        <item>यहि ज्ञान बताए प्रभु यहि ज्ञान बताए ।</item>
+        <item>ॐ नमो..........</item>
+    <item></item>
+    <item></item>
+    </string-array>
+
+
+    <string-array name="eighteen_krishna_piyara">
+    <item></item>
+        <item>कृष्ण पियारा, प्रभु बिना त हाम्रो को छर ।</item>
+        <item></item>
+        <item></item>
+        <item>हामिलाई छोडि नजाउ बृन्दाबन,,</item>
+        <item>तिम्लाई सम्झि रोईरन्छ हाम्रो मन्,,</item>
+        <item>कृष्ण पियारा.......</item>
+        <item></item>
+        <item></item>
+        <item>गोपि जनका आँखाका तारा,,</item>
+        <item>तिमी बिना कोहि छैन सहारा,,,</item>
+        <item>कृष्ण पियारा..........</item>
+        <item></item>
+        <item></item>
+        <item>हाम्लाई छोडि नजाउ त्यसरि,,</item>
+        <item>तिमी बिना बाचौ म कसरी,,,</item>
+        <item>कृष्ण पियारा.............</item>
+        <item></item>
+        <item></item>
+        <item>छोडेउ किन आमालाई बाबालाई,,</item>
+        <item>किन छोडेउ पियारि राधालाई,,,</item>
+        <item>कृष्ण पियारा.............</item>
+        <item></item>
+        <item></item>
+        <item>तिम्रि आमा सारै नै निष्ठुरि,,</item>
+        <item>ओखलमा बाधियौ कसरी,,,</item>
+        <item>कृष्ण पियारा............</item>
+        <item></item>
+        <item></item>
+        <item>सुन्दर जोडि राधा र कृष्णको,,</item>
+        <item>झल्को आउछ बिर्सन्न किन हो,,,</item>
+        <item>कृष्ण पियारा.............</item>
+        <item></item>
+        <item></item>
+        <item>रुवायौ किन आमालाई बाबालाई,,</item>
+        <item>रुवायौ किन पियारि राधालाई,,,</item>
+        <item>कृष्ण पियारा.............</item>
+        <item></item>
+        <item></item>
+        <item>आउन कृष्ण एकपल्ट आउन,,</item>
+        <item>वंशिको धुन हामिलाई सुनाउन,,,</item>
+        <item>कृष्ण पियारा.............</item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+
+    <string-array name="nineteen_kohi_pagal_dhana_le">
+    <item></item>
+        <item>कोहि पागल धनले, कोहि पागल मनले</item>
+        <item>म त पागल कृष्ण नामले....।।</item>
+    <item></item>
+    <item></item>
+        <item>जिवनको हरियालि आखिरिमा सुक्छ ।</item>
+        <item>तेरो मेरो भन्ने सबै माटो मुनि लुक्छ ।।</item>
+        <item>कोहि पागल धनले.............।।।</item>
+    <item></item>
+    <item></item>
+        <item>धन सम्पत्ति नाता गोता मात्रै केही छिन्को ।</item>
+        <item>हरि नाम जपे पाप पखालिन्छ मन्को ।।</item>
+        <item>कोहि पागल धनले.............।।।</item>
+    <item></item>
+    <item></item>
+        <item>पाउ पायौ तिर्थ गर्न हातले गर्नु दान ।</item>
+        <item>कान्ले सुन्नु हरि कथा मनले गर्नु ध्यान ।।</item>
+        <item>कोहि पागल धनले.............।।।</item>
+    <item></item>
+    <item></item>
+    </string-array>
+
+
+    <string-array name="twenty_aaye_ma_mata_timro_charan_ma">
+    <item></item>
+        <item>आए म माता तिम्रो चरणमा भेटौ म कसरी ।</item>
+        <item>तिमी छौ टाढा, यो भव सागर तरौ म कसरी ।।</item>
+    <item></item>
+    <item></item>
+        <item>संसारको दुखि जन्जाल भित्र, बिलौना गर्दै छु ।</item>
+        <item>खालि छ हात दुई थोपा आसु, पाउमा झा्दै छु ।।</item>
+        <item>आए म माता..........।।।</item>
+    <item></item>
+    <item></item>
+        <item>न पुजा पाठ न जप तप, नगरे अर्चना ।</item>
+        <item>रित्तो छु माता के छ र चढाउ गर्दछु बन्दना ।।</item>
+        <item>आए म माता..........।।।</item>
+    <item></item>
+    <item></item>
+        <item>हजारौ नाम ब्यप्त जगतमा, रुप छ अनेक ।</item>
+        <item>हृदय भित्र सजाउछु माता, भरिदेउ बिबेक ।।</item>
+        <item>आए म माता..........।।।</item>
+    <item></item>
+    <item></item>
+    </string-array>
+
+
+    <string-array name="twentyone_yo_bato_kaha_jane_hola">
+    <item></item>
+        <item>यो बाटो कहाँ जाने होला, सरासरि बैकुण्ठ धामैमा </item>।
+    <item></item>
+    <item></item>
+        <item>किर्तनमा जाउँ हामी मन्दिरमा जाउँ,,</item>
+        <item>साथि संगि सबै मिलि हरि भजन गाउँ ।।</item>
+        <item>यो बाटो कहाँ...............।।।</item>
+    <item></item>
+    <item></item>
+        <item>बिहानिको मिर्मिरेमा सन्ध्या हवन गर्ने,,</item>
+        <item>भगवानको भजन गरे भव सागर तर्ने ।।</item>
+        <item>यो बाटो कहाँ...............।।।</item>
+    <item></item>
+    <item></item>
+        <item>रिस राग अहङ्कार गर्नु आखिर किन,,</item>
+        <item>आज भन्दै भोलि भन्दै आउछ जाने दिन ।।</item>
+        <item>यो बाटो कहाँ...............।।।</item>
+    <item></item>
+    <item></item>
+        <item>उनै प्रभु सृष्टिकर्ता दयाका खानि,,</item>
+        <item>हरि तिरै ध्यान लगाउ झुटो संसार जानि ।।</item>
+        <item>यो बाटो कहाँ...............।।।</item>
+    <item></item>
+    <item></item>
+        <item>सत्कर्ममा लागि रहे सबको भलो होला,,</item>
+    <item>फेरि पाउन कठिन छ है मानिसको चोला ।।</item>
+        <item>यो बाटो कहाँ...............।।।</item>
+    <item></item>
+    <item></item>
+    </string-array>
+
+
+    <string-array name="twentytwo_ekadasi_tilako_dan">
+    <item></item>
+        <item>एकादसि तुलसि, तिलको दान,,</item>
+        <item>हाम्लाई पनि बैुकुण्ठ लैजाउ भगवान ।।</item>
+    <item></item>
+    <item></item>
+        <item>पाउले गर्नु तिर्थ व्रत, हातले गर्नु दान,,</item>
+        <item>कानले सुन्नु हरि कथा, मनले गर्नु ध्यान ।।</item>
+        <item>एकादसि तुलसि.............</item>
+    <item></item>
+    <item></item>
+        <item>गंगा तार यमुना तार, तार सबै कुण्ड,,</item>
+        <item>शालिग्राम भगवान लैजाउ बैकुण्ठ ।।</item>
+    <item></item>
+    <item></item>
+        <item>दिदि बहिनि, दाजु भाइ यहिहो जाने ठाउँ,,</item>
+        <item>प्रभु सँग नाता जोड्दै हरि राम गाउँ  ।।</item>
+        <item>एकादसि तुलसि..............</item>
+    <item></item>
+    <item></item>
+        <item>मुक्तिनाथ गण्डकी दामोदर कुण्ड,,</item>
+        <item>शालिग्राम भगवान लैजाउ बैकुण्ठ ।।</item>
+    <item></item>
+    <item></item>
+    </string-array>
+
+
+
+
+    <string-array name="twentythree_krishna_gaye_yamuna_tarera">
+    <item></item>
+        <item>हे हे हे....  कृष्ण गए यमुना तरेर</item>
+        <item>रुन्छिन् राधा बिलौना गरेर</item>
+        <item>कृष्ण बैगुनि तर नभई नहुने ....!!</item>
+    <item></item>
+    <item></item>
+        <item>हे हे हे.... कृष्ण तिमी नजाउन मथुरा</item>
+        <item>हुन्छ मन टुकुर टुकुर</item>
+        <item>कृष्ण बैगुनि तर नभई नहुने ....!!</item>
+    <item></item>
+    <item></item>
+        <item>हे हे हे.... कृष्ण तिमी आउछौकि भनेर</item>
+        <item>भिरको बाटो सम्मै छ खनेर</item>
+        <item>कृष्ण बैगुनि तर नभई नहुने ....!!</item>
+    <item></item>
+    <item></item>
+        <item>हे हे हे.... छाडि कृष्ण जानू भो मथुरा</item>
+        <item>हुन्छ मन टुकुरा टुकुरा</item>
+        <item>कृष्ण बैगुनि तर नभई नहुने ....!!</item>
+    <item></item>
+    <item></item>
+        <item>हे हे हे.... छाडि कृष्ण मथुरा जानुभो</item>
+        <item>हाम्रो मन चोरेर लानुभो</item>
+        <item>कृष्ण बैगुनि तर नभई नहुने ....!!</item>
+    <item></item>
+    <item></item>
+    </string-array>
+
+
+
+    <string-array name="twentyfour_aage_aage_basuri_wala">
+    <item></item>
+        <item>आगे आगे वाँसुरि वाला पछि पछि गोपिनि हरर</item>
+    <item></item>
+    <item></item>
+        <item>माया नदेउ दहि चोरि खानेलाई,,</item>
+        <item>गोकुल छोडि मथुरा जानेलाई !!</item>
+    <item></item>
+    <item></item>
+        <item>हे हे हे.. गोकुलमा जादा खेरि कत्रो हल्ला खल्ला</item>
+        <item>कति छिट्टो बिर्सियौ कृष्ण नौनि घिउका डल्ला !!</item>
+        <item>आगे आगे .........!!!</item>
+    <item></item>
+    <item></item>
+        <item>हे हे हे.. तिरिरी वंशी बज्यो यमुनाको तिरमा</item>
+        <item>उनै काले कृष्णजीको मयुर मुकुट शिरमा !!</item>
+        <item>आगे आगे .........!!!</item>
+    <item></item>
+    <item></item>
+        <item>हे हे हे.. यमुनामा खेल्दै हिड्ने राधा कृष्ण दुवै</item>
+        <item>भोक तिर्ख केही छैन मस्की हिँड्छन् दुवै</item>
+        <item>आगे आगे .........!!!</item>
+    <item></item>
+    <item></item>
+        <item>राधा प्यारि नक्कलि त, कृष्ण रैछन् जालि</item>
+        <item>मत जान्छु कृष्ण भेट्न लौन यसै पालि!!</item>
+        <item>आगे आगे .........!!!</item>
+    <item></item>
+    <item></item>
+        <item>हे हे हे.. राधीकाले भन्दिरैछिन् कृष्णजी लाई काले</item>
+        <item>आज हेर वृन्दावनमा सँगै नाच्न थाले!!</item>
+        <item>आगे आगे .........!!!</item>
+    <item></item>
+    <item></item>
+    </string-array>
+
+    <string-array name="twentyfive_jai_jai_ho_bhole_baba">
+    <item></item>
+        <item>जय जय हो भोले बाबा हर बम बम</item>
+        <item></item>
+        <item></item>
+        <item>कैलाशबासी हृदय निवासी</item>
+        <item>संहहार कर्ता हे अविनाशी</item>
+        <item>ढमरु बजाउछन डम डम डम</item>
+        <item>जय जय .............</item>
+        <item></item>
+        <item></item>
+        <item>जटामा गंगा छन तिमी सँग</item>
+        <item>खेल्दछौ जुवा पार्वती सँग</item>
+        <item>नाच्दछौ नटराज छम छम छम</item>
+        <item>जय जय .............</item>
+        <item></item>
+        <item></item>
+        <item>नागको माला नीलो छ गला</item>
+        <item>निधारमा तिम्रो अग्निको ज्वाला</item>
+        <item>त्रिनेत्र बल्दछन दन दन दन</item>
+        <item>जय जय .............</item>
+        <item></item>
+        <item></item>
+        <item>भष्म लगाई चन्दन लगाई</item>
+        <item>बाघम्बर माथि बस्छौ रमाई</item>
+        <item>चन्द्रमा टल्कन्छ टल टल टल</item>
+        <item>जय जय .............</item>
+
+        <item></item>
+        <item></item>
+    </string-array>
+
+
+
+    <string-array name="twentysix_ram_lai_aaghi_ma_laula">
+        <item></item>
+        <item>रामलाई अघि म लाउँला, रामकै पछि म जाउँला</item>
+        <item>राम राम भन्दा भन्दै पार तरौंला</item>
+        <item></item>
+        <item></item>
+        <item>कस्ता कस्ता मानिसहरु सम्पत्तिमा हराउने</item>
+        <item>भजन किर्तन गरौं भन्दा परै डराउने</item>
+        <item>रामलाई..................</item>
+        <item></item>
+        <item></item>
+        <item>मिली जुली भजन गरौं आउ सबै साथीहो</item>
+        <item>भगवानलाई मनपर्ने फुलपाती हो</item>
+        <item>रामलाई..................</item>
+        <item></item>
+        <item></item>
+        <item>रामको भजन गर्न सँधै भन्नु हुन्थ्यो आमाले</item>
+        <item>हाम्रो सबै दुःख हर्छन उनै रामले</item>
+        <item>रामलाई..................</item>
+        <item></item>
+        <item></item>
+        <item>देवी र देउरालीलाई फुलपाती चढाउँला</item>
+        <item>राम राम भन्दा भन्दै पार तरौला</item>
+        <item>रामलाई..................</item>
+        <item></item>
+        <item></item>
+        <item>बैकुण्ठमा जानुपर्छ रामकै नाम लिएर</item>
+        <item>चौरासी नजाउ अब फेरि फिरेर</item>
+        <item>रामलाई..................</item>
+    <item></item>
+    <item></item>
+</string-array>
+
+
+    <string-array name="twentyseven_guru_bina_gyan_kaile_mildaina">
+        <item></item>
+        <item>गुरु बिना ज्ञान कैले मिल्दैन</item>
+        <item>माया जालको यो दुःख छुट्दैन</item>
+    <item></item>
+    <item></item>
+        <item>मोहरुपी बन्धनको गाँठो हुन्छ सारो</item>
+        <item>गुरु बिना फुकाउन हुन्छ अति सारो</item>
+        <item>गुरु बिना ...............</item>
+    <item></item>
+    <item></item>
+        <item>आत्म खोज्छ मुक्त हुन माया लाग्छ छेक्न</item>
+        <item>ज्ञान बिना पाउँदैन परमात्मा देख्न</item>
+        <item>गुरु बिना ...............</item>
+    <item></item>
+    <item></item>
+        <item>भरे भोलि भन्दा जीवन यो बित्छ</item>
+        <item>तत्वज्ञान पाउँदैन मायाले नै जित्छ</item>
+        <item>गुरु बिना ...............</item>
+    <item></item>
+    <item></item>
+        <item>यो मायामा झुल्दा झुल्दै आइपुग्छ काल</item>
+        <item>नारायण नारायण मन्त्र जपी हाल</item>
+        <item>गुरु बिना ...............</item>
+    <item></item>
+    <item></item>
+</string-array>
+
+
+    <string-array name="twentyeight_jaya_ramanuja">
+        <item></item>
+        <item>(जय रामानुज)३ शेष गुरु</item>
+    <item></item>
+    <item></item>
+        <item>जसले फेर्दा जोडले स्वास</item>
+        <item>सारा जग यो दग्ध हुने</item>
+        <item>जय रामानुज..........</item>
+    <item></item>
+    <item></item>
+        <item>जसले फेर्दा जोडले स्वास</item>
+        <item>सारा जग योभस्म हुने</item>
+        <item>जय रामानुज..........</item>
+    <item></item>
+    <item></item>
+        <item>जसले हेर्दा सारा जग यो</item>
+        <item>श्री हरि पदमा मुग्ध हुने</item>
+        <item>जय रामानुज..........</item>
+    <item></item>
+    <item></item>
+        <item>उस्ता प्यारा गुरुका पाउ</item>
+        <item>भजदा आत्मा शुद्व हुने</item>
+        <item>जय रामानुज..........</item>
+    <item></item>
+    <item></item>
+</string-array>
+
+
+    <string-array name="twentynine_guru_bina_gyan_kaile_mildaina">
+        <item></item>
+        <item>गुरु विना ज्ञान कैले मिल्दैन</item>
+        <item>माया जालको यो दुःख छुट्दैन</item>
+    <item></item>
+    <item></item>
+        <item>मोहरुपी बन्धनको गाँठो हुन्छ सारो</item>
+        <item>गुरु बिना फुकाउन हुन्छ अति गारो</item>
+        <item>गुरुविना............</item>
+    <item></item>
+    <item></item>
+        <item>आत्म खोज्छ मुक्त हुन माया लाग्छ छेक्न</item>
+        <item>ज्ञान विना पाउँदैन परमात्मा देख्न</item>
+        <item>गुरुविना............</item>
+    <item></item>
+    <item></item>
+        <item>भरे भोलि भन्दा जीवन यो वित्छ</item>
+        <item>तत्वज्ञान पाउँदैन मायाले नै जित्छ</item>
+        <item>गुरुविना............</item>
+    <item></item>
+    <item></item>
+        <item>यो मायामा झुल्दा झुल्दै आइपुग्छ काल</item>
+        <item>नारायण नारायण  मन्त्र जपी हाल</item>
+        <item>गुरुविना............</item>
+    <item></item>
+    <item></item>
+</string-array>
+
+
+
+    <string-array name="thirty_hey_krishna_malai_mitho_bansi">
+        <item></item>
+        <item>हे कृष्ण मलाई मीठो वंशी सुनाई देउन</item>
+        <item>हामीलाई मात्रै होइन त्रिलोक थर्काइ देउन</item>
+    <item></item>
+    <item></item>
+        <item>कसरी वंशीले त्रिलोक थर्काई दिन्छौ</item>
+        <item>तपस्वी ज्ञानीको आशन डगाई दिन्छौ</item>
+        <item>हे कृष्ण ..............</item>
+    <item></item>
+    <item></item>
+        <item>वंशीको महिमा बुझ्दिनौ तिमी राधा</item>
+        <item>योगी र ध्यानीको ध्यानमा पर्छ बाधा</item>
+        <item>हे कृष्ण ..............</item>
+    <item></item>
+    <item></item>
+        <item>बाँसको टुक्राको महिमा के पो हुन्छ</item>
+        <item>हामीले शिवाय अरुले कहाँ यो सुन्छ</item>
+        <item>हे कृष्ण ..............</item>
+    <item></item>
+    <item></item>
+        <item>इन्द्रादी देवता सबको सेखी झार्छन</item>
+        <item>ब्रम्हादी त्रिदेव मोहित यसले पार्छन</item>
+        <item>हे कृष्ण ..............</item>
+    <item></item>
+    <item></item>
+        <item>सुरीलो तानको मोहीनी कस्तो राग</item>
+        <item>सुनेर यी कुरा चकित भएँ आज</item>
+        <item>हे कृष्ण ..............</item>
+    <item></item>
+    <item></item>
+</string-array>
+
+
+    <string-array name="thirtyone_bhole_baba_mero_dukha_kasta_metaideu">
+        <item></item>
+        <item>भोलेबाबा मेरो दुःख कष्ट मेटाइदेउ</item>
+        <item>ढुब्नलाग्यो नौका मेरा पार लगाईदेउ</item>
+    <item></item>
+    <item></item>
+        <item>ऋषिमुनी ज्ञानी सन्त ध्यान मग्नमा</item>
+        <item>सबको उद्वार गरी तिमी चौधै भुवनमा</item>
+        <item>भोले बाबा......................</item>
+    <item></item>
+    <item></item>
+        <item>निलकण्ठ महादेव आसा पुर्याइदेउ</item>
+        <item>स्वामी मेरो पुकार सुनी भक्ती बढाइ देउ</item>
+        <item>भोले बाबा......................</item>
+    <item></item>
+    <item></item>
+        <item>काल कुट विष पिई शान्ति दिनुभो</item>
+        <item>सन्त दुःख भक्तजनको उद्वार गर्नु मो</item>
+        <item>भोले बाबा......................</item>
+    <item></item>
+    <item></item>
+</string-array>
+
+
+
+    <string-array name="thirtytwo_brindaban_ko_dandai_danda">
+    <item></item>
+        <item>बुन्दावनको डाँडै डाँडा, चले होलान्‌ गोपिनी</item>
+        <item>कृ्‌ष्णजीलाई मुरली राधीकालाई चुनरी</item>
+        <item>भक्तजन् लाई कृष्ण मुरारी</item>
+        <item></item>
+        <item></item>
+        <item>बरसनाको डाँडै डाँडा आउँदै होलिन गोपिनी</item>
+        <item>बरसनालाई छोडी बुन्दावनलाई सम्झी</item>
+        <item>आउँदैछिन है राधा रानी</item>
+        <item>बुन्दावनको डाँडै डाँडा.........</item>
+        <item></item>
+        <item></item>
+        <item>जिन्दगीको लामो यात्रा, बिसाउनेको टुंगो छैन</item>
+        <item>संसारलाई त्यागी कालको पछि लागी</item>
+        <item>जानुपर्ने होकी होइन</item>
+        <item>बुन्दावनको डाँडै डाँडा.........</item>
+        <item></item>
+        <item></item>
+        <item>यात्रा गर्ने यात्री हुँ म यात्रा गर्न बाँकी छ</item>
+        <item>संसारलाई त्यागी कृ्‌ष्ण नाम जपी</item>
+        <item>जानुपर्ने बैकुण्ठमा</item>
+        <item>बुन्दावनको डाँडै डाँडा.........</item>
+        <item></item>
+        <item></item>
+        <item>हरिनाम जप्दा जप्दै बैकुण्ठमा जानुपर्ने</item>
+        <item>परिवारलाई छोडी माया जाललाई तोडी</item>
+        <item>जानुपर्ने हो कि होइन</item>
+        <item>बुन्दावनको डाँडै डाँडा.........</item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+
+    <string-array name="thirtythree_krishna_gaye_banaima">
+    <item></item>
+        <item>कृष्ण गए बनैमा राधिकालाई सम्झी मनैमा</item>
+    <item></item>
+    <item></item>
+        <item>कृष्ण तिम्रो जन्म भयो कारागार भित्र</item>
+        <item>माता पिता खुसी भए देख्न पाउँदा पुत्र</item>
+        <item>कृष्ण गए बनैमा................</item>
+    <item></item>
+    <item></item>
+        <item>कृष्ण तिमी सानो छँदा नाम थियो काले</item>
+        <item>माटो खाँदा गाली गर्थिन् यशोदा माताले</item>
+        <item>कृष्ण गए बनैमा................</item>
+    <item></item>
+    <item></item>
+        <item>सोह्र सय गोपिनीका सोह्र सय साडी</item>
+        <item>साना साना कृष्णजीलाई पुगिहाल्यो भारी</item>
+        <item>कृष्ण गए बनैमा................</item>
+    <item></item>
+    <item></item>
+    </string-array>
+
+
+    <string-array name="thirtyfour_janakpur_ma_ram_aaye">
+        <item></item>
+        <item>जनकपुरमा राम आए दुलाहा बनेर</item>
+        <item>जाँउ जाँउ सखी पर्सिनलाई फूल लिएर</item>
+    <item></item>
+    <item></item>
+        <item>अयोध्यामा राम जन्मे जनकपुरमा सीता</item>
+        <item>बाल्मीकीले लेख्नुभयो रामायण गीता</item>
+        <item>बिष्णुजीले अवतार लिए राम बनेर</item>
+        <item>जाँउ जाँउ सखी पर्सिनलाई फूल लिएर</item>
+        <item>जनकपुरमा राम आए............</item>
+    <item></item>
+    <item></item>
+        <item>फूलले पर्सिएर रामले धनु धरे</item>
+        <item>जनकपुरको शिव धनु टुक्रा टुक्रा पारे</item>
+        <item>बिष्णुजीले अवतार लिए राम बनेर</item>
+        <item>जाँउ जाँउ सखी पर्सिनलाई फूल लिएर</item>
+        <item>जनकपुरमा राम आए............</item>
+    <item></item>
+    <item></item>
+        <item>रामजीको लिला देखी सिता छक्क परिन</item>
+        <item>फूलको माला हातमा लिई स्वयंबर गरिन</item>
+        <item>लक्ष्मीजीले अवतार लिइन सिता बनेर</item>
+        <item>जाँउ जाँउ सखी पर्सिनलाई फूल लिएर</item>
+        <item>जनकपुरमा राम आए............</item>
+    <item></item>
+    <item></item>
+</string-array>
+
+
+    <string-array name="thirtyfive_chhekyo_malai_maya_jaalaile">
+        <item></item>
+    <item>छेक्यो मलाई माया जालैले</item>
+    <item>पुण्य नभई लान्छ कि हौ पापी कालै ले</item>
+    <item>डुब्नलाग्यो भव सागर</item>
+    <item>आउन प्रभु दया गरी लगाउ किनार</item>
+        <item></item>
+        <item></item>
+    <item>आँसु झर्छ बरर कस्ले पुछि देला</item>
+    <item>यो दुःखको सागरबाट कहिले मुक्ति होला</item>
+    <item>छेक्यो मलाई.............</item>
+        <item></item>
+        <item></item>
+    <item>भजन गर्न बस्छौ यहाँ मन छ कहाँ कहाँ</item>
+    <item>बिषयको वासनाले लान्छ जहाँ जहाँ</item>
+    <item>छेक्यो मलाई.............</item>
+        <item></item>
+        <item></item>
+    <item>साँझ बिहान जैले तैले घुम्छौ खेतबारी</item>
+    <item>मेरो मेरो भन्दा भन्दै फुल्यो केश दारी</item>
+    <item>छेक्यो मलाई.............</item>
+        <item></item>
+        <item></item>
+    <item>आँखा पनि देखिदैन कान बहिरो भयो</item>
+    <item>फुलजस्तो जीवन हाम्रो आज कता गयो</item>
+    <item>छेक्यो मलाई.............</item>
+    <item></item>
+    <item></item>
+</string-array>
+
+    <string-array name="thirtysix_radha_timi_nachidey_firiri">
+    <item></item>
+        <item>राधा तिमी नाचि देउ फिरिरि</item>
+        <item>कृष्णजीको वंशी बज्यो तिरिरि</item>
+        <item>भजन गर्न लेट भयो</item>
+        <item>राधा कृष्णको गोकुलमा भेट</item>
+        <item></item>
+        <item></item>
+        <item>कृष्ण गए गमक्क गम्केर</item>
+        <item>ल्याउछिन राधा पंखाले हम्केर</item>
+        <item>भजन गर्न लेट भयो.......</item>
+        <item></item>
+        <item></item>
+        <item>कृष्ण गए यमुना तरेर</item>
+        <item>रुन्छिन राधा बिलौना गरेर</item>
+        <item>भजन गर्न लेट भयो.......</item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+
+
+    <string-array name="thirtyseven_brinda_ban_ko_pakha_ma">
+        <item></item>
+        <item>बुन्दावनको पाखामा बासुरीको भाकामा</item>
+        <item>हामीलाई डाकेर राम त खेलौ हाँसेर</item>
+    <item></item>
+    <item></item>
+        <item>पूर्णिमाको सांझ पर्दा बुन्दावनमा आयौ</item>
+        <item>संसारलाई मोहित पार्ने बांसुरी बजायो</item>
+        <item>अहिले जस्तो लागेर राम त खेलौ हाँसेर</item>
+    <item></item>
+    <item></item>
+        <item>चौबाटोमा छेकी छेकी गाग्रा फोर्यौ</item>
+        <item>ग्वाला बाल साथमा लिई नौनी मखन चोर्यौ</item>
+        <item>अहिले जस्तो लागेर राम त खेलौ हाँसेर</item>
+    <item></item>
+    <item></item>
+        <item>गोकुलका गोपी सबै गोरस बेच्न जान्थे</item>
+        <item>कृष्ण चाहीँ लुकी लुकी नौनी मखन खान्थे</item>
+        <item>अहिले जस्तो लागेर राम त खेलौ हाँसेर</item>
+    <item></item>
+    <item></item>
+        <item>बासुरी त्यो सुनेपछि मोहमाया त्यागी</item>
+        <item>रास खेल्ने भनी आयौ घर देखी भागी</item>
+        <item>अहिले जस्तो लागेर राम त खेलौ हाँसेर</item>
+    <item></item>
+    <item></item>
+</string-array>
+
+
+    <string-array name="thirtyeight_hridaya_ma_krishna_ko_photo_xa">
+        <item></item>
+        <item>हृदयमा कृष्णको फोटो छ जीबन हाम्रो छोटो छ</item>
+        <item>हाँसेर भए पनि रोएर भए पनि जीवन बिताउनु छ</item>
+    <item></item>
+    <item></item>
+        <item>आत्मा हाम्रो अमर छ दिब्य धाममा पुर्याउछ</item>
+        <item>दुःख र सुखको नाटक गरेर जीवन बिताउनुछ</item>
+        <item>हृदयमा कृष्णको ...............</item>
+    <item></item>
+    <item></item>
+        <item>घमण्ड हामी त्यागौन सबैमा माया बाडौन</item>
+        <item>राजा भए पनि जोगी भए पनि छोडेर जानुछ</item>
+        <item>हृदयमा कृष्णको ...............</item>
+    <item></item>
+    <item></item>
+        <item>जागौन साथी जागौन धर्मको बाटोमा लागौन</item>
+        <item>धनी भए पनि गरिब भए पनि, एक दिन जानुछ</item>
+        <item>हृदयमा कृष्णको ...............</item>
+    <item></item>
+    <item></item>
+</string-array>
+
+
+    <string-array name="thirtynine_bashuri_ko_dhuna_sunera">
+        <item></item>
+        <item>बाँसुरीको धुन सुनेर</item>
+        <item>आयौंहामी दैलो थुनेर</item>
+    <item></item>
+    <item></item>
+        <item>गोकुलमा छौ कि तिमी मथुरामा छौ कि</item>
+        <item>घर घर दौडी दौडी माखन खाँदै छौ कि</item>
+        <item>कति बसौं तिमीलाई सम्झेर</item>
+        <item>आयौं हामी दैलो थुनेर</item>
+        <item>बाँसुरीको धुन सुनेर............</item>
+    <item></item>
+    <item></item>
+        <item>भोक पनि छैन मलाई निद्रा पनि छैन</item>
+        <item>रनवन खोजीसके कतै भेटिदैन</item>
+        <item>दर्शन तिम्रो पाउँछु भनेर</item>
+        <item>आयौँ हामी देलो थुनेर</item>
+        <item>बाँसुरीको धुन सुनेर............</item>
+    <item></item>
+    <item></item>
+        <item>आजसम्म खोज्दा खोज्दै जीवन बितीसक्यो</item>
+        <item>भजन गर्छु भन्दा भन्दै कालले जीति सक्यो</item>
+        <item>अबदेखि तिम्रो कृपा हुन्छ भनेर</item>
+        <item>आयौं हामी दैलो थुनेर</item>
+        <item>बाँसुरीको धुन सुनेर............</item>
+    <item></item>
+    <item></item>
+</string-array>
+
+
+    <string-array name="fourty_sira_mathi_sankara_ko_chandra_jhalala">
+    <item></item>
+    <item>शिरमाथि शंकरको चन्द्र झलल</item>
+    <item>बगेकी छन जटाबाट गंगा सललल</item>
+        <item></item>
+        <item></item>
+    <item>त्रिशुल र डम्बरु छ शिवजीको हातमा</item>
+    <item>बसेका छन्‌ शिवजी पार्वतीका साथमा</item>
+    <item>शिरमाथि..............</item>
+        <item></item>
+        <item></item>
+    <item>सल्बलाउँछन्‌ घाँटीभरी माला नागको</item>
+    <item>शरीर भरी खरानी छ भोले बाबाको</item>
+    <item>शिरमाथि..............</item>
+        <item></item>
+        <item></item>
+    <item>देवताका देव प्रभु महादेव</item>
+    <item>ऋषिमुनि सबै गर्छन हजुरको सेवा</item>
+    <item>शिरमाथि..............</item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+
+    <string-array name="fourtyone_purana_lagyo_hari_timro_mandirai_ma">
+        <item></item>
+        <item>पुराण लाग्यो हरी तिम्रो मन्दिरैमा</item>
+        <item>तिम्रो मन्दिरैमा हरी तिम्रो मन्दिरैमा</item>
+        <item>भजन लाग्यो हरी तिम्रो मन्दिरैमा</item>
+        <item>तिम्रो मन्दिरैमा हरी तिम्रो मन्दिरैमा</item>
+    <item></item>
+    <item></item>
+        <item>यदि म हुन्थे भने दियोको बाती</item>
+        <item>बली रहन्थे प्रभु तिम्रो मन्दिरमा</item>
+        <item>पुराण................</item>
+    <item></item>
+    <item></item>
+        <item>यदि म हुन्थे भने पुष्पको माला</item>
+        <item>सजी रहन्थे हरी तिम्रो त्यो गलामा</item>
+        <item>पुराण................</item>
+    <item></item>
+    <item></item>
+        <item>यदि म हुन्थे भने शंख र घण्ट</item>
+        <item>बजी रहन्थे प्रभु तिम्रो मन्दिरमा</item>
+        <item>पुराण................</item>
+    <item></item>
+    <item></item>
+        <item>यदि म हुन्थे भने तिम्रो प्रिय भक्त</item>
+        <item>आश्रय लिन्थे प्रभु तिम्रो शरणैमा</item>
+        <item>पुराण................</item>
+    <item></item>
+    <item></item>
+</string-array>
+
+
+    <string-array name="fourtytwo_he_hari_darshana_timro_kaha_hola">
+    <item></item>
+        <item>हे हरि दर्शन तिम्रो कहाँ होला, ठग्यो नि भाग्यले ठग्यो</item>
+        <item></item>
+        <item></item>
+        <item>साष्टाङ्ग गर्न यो शिर पाको</item>
+        <item>शीरले साष्टाङ्ग गर्दिने भाको</item>
+        <item>हे हरि दर्शन..............</item>
+        <item></item>
+        <item></item>
+        <item>दर्शन गर्न यो नेत्र पाको</item>
+        <item>नेत्रले दर्शन गर्दिने भाको</item>
+        <item>हे हरि दर्शन..............</item>
+        <item></item>
+        <item></item>
+        <item>भजन सुन्न यो कान पाको</item>
+        <item>कानले भजन सुन्दिने भाको</item>
+        <item>हे हरि दर्शन..............</item>
+        <item></item>
+        <item></item>
+        <item>भजन गर्न यो जिब्रो पाको</item>
+        <item>जिब्रोले भजन गर्दिने भाको</item>
+        <item>हे हरि दर्शन..............</item>
+        <item></item>
+        <item></item>
+        <item>दान गर्न यी हात पाको</item>
+        <item>हातले दान गर्दिने भाको</item>
+        <item>हे हरि दर्शन..............</item>
+        <item></item>
+        <item></item>
+        <item>तीर्थमा जान यो पाउ पाको</item>
+        <item>पाउले तीर्थ गईदिने भाको</item>
+        <item>हे हरि दर्शन..............</item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+
+    <string-array name="fourtythree_narayana_ho_ishwar_ko_pyaro_naam">
+    <item></item>
+        <item>नारायण हो ईश्वरको प्यारो नाम</item>
+        <item>जपौ सबले पाइन्छ परमधाम</item>
+        <item></item>
+        <item></item>
+        <item>धुप र बाती अक्षता थालीमा</item>
+        <item>आयौ हामी हृजुरके खोजीमा</item>
+        <item>मर्ने चोला हो थाम्दैन मायाले</item>
+        <item>सानु ठूलो भन्दैन कालले</item>
+        <item>नारायण हो ईश्वरको.........</item>
+        <item></item>
+        <item></item>
+        <item>ईश्वरको नाम हो अमृत बराबर</item>
+        <item>नारायण लैजाउन सरासर</item>
+        <item>मर्नु र वाँच्नु संसारको रमिता</item>
+        <item>अजम्बरी छैनौ है हामी त</item>
+        <item>नारायण हो ईश्वरको.........</item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+
+    <string-array name="fourtyfour_dhun_bajyo_dhun_bajyo_pakkai_krishna_hun">
+    <item></item>
+        <item>धुन बज्यो धुन बज्यो पक्कै कृष्ण हुन</item>
+        <item>नबजाइदेउ बाँसुरी रुन्छ हाम्रो मन</item>
+        <item>कहाँ बज्यो बाँसुरी, त्यही बुन्दावन</item>
+        <item>कृष्णजीलाई छाडेर कहाँ जान्छ मन</item>
+        <item></item>
+        <item></item>
+        <item>संसार हेर्ने आँखालाई छेक्यो जालैले</item>
+        <item>जान्न जान्न भन्दा भन्दै लान्छ कालेले</item>
+        <item>धुन बज्यो धुन बज्यो..............</item>
+        <item></item>
+        <item></item>
+        <item>सधै हामीलाई हतार हतार सधै हामीलाई काम</item>
+        <item>मर्ने बेला भई सक्यो कहिले जप्ने राम</item>
+        <item>धुन बज्यो धुन बज्यो..............</item>
+        <item></item>
+        <item></item>
+        <item>जीवनमा के के भयो भन्नु हुँदैन</item>
+        <item>हरि भजन गर्नलाई छोड्नु हुँदैन</item>
+        <item>धुन बज्यो धुन बज्यो..............</item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+
+    <string-array name="fourtyfive_hey_krishna_sir_ma_mukut_talala">
+    <item></item>
+        <item>हे कृष्ण शीरमा मुकुट टलल गोकुल झलल</item>
+        <item></item>
+        <item></item>
+        <item>भाद्र महिना अष्टमी रातैमा</item>
+        <item>जन्म भयो मथुरा जेलैमा</item>
+        <item>हे कृष्ण शीरमा..........</item>
+        <item></item>
+        <item></item>
+        <item>वासुदेवको काँधमा चढेर</item>
+        <item>यमुना जी आई रथिन बढेर</item>
+        <item>हे कृष्ण शीरमा..........</item>
+        <item></item>
+        <item></item>
+        <item>ताला खुले जेल पनि खुलेका</item>
+        <item>पाले दाई चाँही निन्द्रामा भुलेका</item>
+        <item>हे कृष्ण शीरमा..........</item>
+        <item></item>
+        <item></item>
+        <item>बाटो पाएँ यमुना तर्नलाई</item>
+        <item>जन्म लियौ भु भार हर्नलाई</item>
+        <item>हे कृष्ण शीरमा..........</item>
+        <item></item>
+        <item></item>
+        <item>कृष्ण अवतार हजुरले लिएको</item>
+        <item>कंशा सुरले सब दुःख दिएको</item>
+        <item>हे कृष्ण शीरमा..........</item>
+        <item></item>
+        <item></item>
+        <item>अत्याचारले संसारै छाएको</item>
+        <item>त्यो बेलाले हजुरलाई पाएको</item>
+        <item>हे कृष्ण शीरमा..........</item>
+        <item></item>
+        <item></item>
+        <item>सुन्नपाए कृष्णले बोलेको</item>
+        <item>शान्ति हुन्थ्यो भित्रमन पाकेको</item>
+        <item>हे कृष्ण शीरमा..........</item>
+        <item></item>
+        <item></item>
+        <item>जाउँला भने बाटो छ खोलाको</item>
+        <item>न जाउँ भने कृष्णले बोलाको</item>
+        <item>हे कृष्ण शीरमा..........</item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+
+    <string-array name="fourtysix_krishna_bhajan_ma_lagyo_mero_man">
+    <item></item>
+        <item>कृष्ण भजनमा लाग्यो मेरो मन</item>
+        <item>आज बाँसुरीको धुन सुनेर</item>
+        <item>हरि भजनमा लाग्यो मेरो मन</item>
+        <item>आज बाँसुरीको धुन सुनेर</item>
+        <item></item>
+        <item></item>
+        <item>फुल चढाउँ भने भमराको जुठो</item>
+        <item>भमराले छोडी दियो फूल</item>
+        <item>आज बाँसुरीको धुन सुनेर</item>
+        <item>कृष्ण भजनमा लाग्यो.........</item>
+        <item></item>
+        <item></item>
+        <item>मह चढाउँ भने मौरीको जुठो</item>
+        <item>मोरीले छोडी गयो मह्‌</item>
+        <item>आज बाँसुरीको धुन सुनेर</item>
+        <item>कृष्ण भजनमा लाग्यो.........</item>
+        <item></item>
+        <item></item>
+        <item>दुध चढाउँ भने बाछोको जुठो</item>
+        <item>बाछाले छाडी गयो दुध</item>
+        <item>आज बाँसुरीको धुन सुनेर</item>
+        <item>कृष्ण भजनमा लाग्यो.........</item>
+        <item></item>
+        <item></item>
+        <item>जल चढाउँ भने माछाको जुठो</item>
+        <item>माछाले छाडी गयो जल</item>
+        <item>आज बाँसुरीको धुन सुनेर</item>
+        <item>कृष्ण भजनमा लाग्यो.........</item>
+        <item></item>
+        <item></item>
+        <item>फल चढाउँ भने चराको जुठो</item>
+        <item>चराले छाडीगयो फल</item>
+        <item>आज बाँसुरीको धुन सुनेर</item>
+        <item>कृष्ण भजनमा लाग्यो.........</item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+
+    <string-array name="fourtyseven_rato_fariya_radha_le_lagauda">
+    <item></item>
+        <item>रातो फरिया राधाले लगाउँदा</item>
+        <item>कृष्ण तिमीले बाँसुरी बजाउँदा</item>
+        <item>यमुना नदी तरौला</item>
+        <item>भक्तको मन कसरी बुझाउँला</item>
+        <item></item>
+        <item></item>
+        <item>पूर्णिमा रातको चन्द्रमा जस्तो प्रभुको मुहार</item>
+        <item>कृष्ण प्रभु नै भक्तको जीन्दगी प्रभु नै संसार</item>
+        <item>ग्वाला परे कुनामा कंश परे थुनामा</item>
+        <item>सुन मेरा प्यारा प्रभुजी</item>
+        <item>सुन मेरा प्यारा प्रभुजी</item>
+        <item>रातो फरिया राधाले............</item>
+        <item></item>
+        <item></item>
+        <item>यमुना नदि कलकल झर्छ, प्रभुलाई सम्झेर</item>
+        <item>प्रमुको नाम अजम्बरी छ, भक्तले जपेर</item>
+        <item>बुन्दावन र मथुरा कृष्ण जी छ गोकुलमा</item>
+        <item>सुन मेरा प्यारा प्रुभुजी</item>
+        <item>सुन मेरा प्यारा प्रभु जी</item>
+        <item>रातो फरिया राधाले............</item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+
+    <string-array name="fourtyeight_nauni_makhan_choreko_kina">
+    <item></item>
+        <item>नौनी माखन चोरेको किन, जोरी पारी दुनियाँ हसाउँन</item>
+        <item></item>
+        <item></item>
+        <item>नौनी मखन हराएको सँधै खबर आउँछ</item>
+        <item>गोपिनीको उजुर मैले सँधै सुन्नु पर्छ</item>
+        <item>नौनी माखन...............</item>
+        <item></item>
+        <item></item>
+        <item>कृष्ण तिम्रो इच्छा मेले पूरा गरिन कि</item>
+        <item>खानलाउन दिइन कि माया गरिन कि</item>
+        <item>नौनी माखन...............</item>
+        <item></item>
+        <item></item>
+        <item>ओखलमा बाँधी राख्छु कहिल्यै फुकाउँदिन</item>
+        <item>आजदेखि काले तलाई कतै जान दिन्न</item>
+        <item>नौनी माखन...............</item>
+        <item></item>
+        <item></item>
+        <item>कृष्ण भन्छन्‌ माताजीको पाउ समातेर</item>
+        <item>आखाबाट मोति जस्ता आँशु खसालेर</item>
+        <item>तिम्रोसामु खाइदिन्छु कसम, छैन मैले चोरेको माखन</item>
+        <item></item>
+        <item></item>
+        <item>हाम्रा घर आउन मन लाग्छ सबैलाई</item>
+        <item>चोरी गरेँ भन्दै उजुर गर्छन हजुरलाई</item>
+        <item>तिम्रोसामु खाइदिन्छु कसम, छैन मैले चोरेको माखन</item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+
+    <string-array name="fourtynine_hamro_ghar_ma_aau_hai_kanhaiya">
+    <item></item>
+        <item>हाम्रो घर आउ है कन्हैया तिमीलाई जान दिदैनौ</item>
+        <item></item>
+        <item></item>
+        <item>हाम्रा घर आयौ भने माखन दिनेछौं</item>
+        <item>माखन दिन्छौ तिमीलाई माखन दिनेछौं</item>
+        <item>माखन खाउ है कन्हैया तिम्लाई जान दिदैनौ</item>
+        <item></item>
+        <item></item>
+        <item>हाम्रा घर आयौ भने बाँसुरी दिनेछौं</item>
+        <item>बाँसुरी दिन्छौ तिमीलाई बाँसुरी दिनेछौं</item>
+        <item>बंशि बजाउ है कन्हैया तिम्लाई जान दिदैनौ</item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+
+    <string-array name="fifty_banshi_mitho_krishna_le_bajako">
+    <item></item>
+        <item>वंशी मीठो कृष्णले बजाको</item>
+        <item>बुन्दावनमा त्यो रास रचाको</item>
+        <item>बंशीले बालेको,</item>
+        <item>ख्याल माया लाग्दैन हो कृष्ण कालेको</item>
+        <item></item>
+        <item></item>
+        <item>सुदर्शनधारी कृष्ण मुरारी पिताम्बर लाएको</item>
+        <item>शिरमा मुकुट बैजन्ती माला क्या राम्रो सुहाको</item>
+        <item>भजन गाउँ श्री कृष्ण प्याराको</item>
+        <item>दुःख हर्छन भक्तजन साराको</item>
+        <item>वंशी वालेको,</item>
+        <item>ख्याल माया लाग्दैन हो कृष्ण कालेको</item>
+        <item></item>
+        <item></item>
+        <item>श्री वुन्दावनमा गाई चराउँदै बाँसुरी बजाको</item>
+        <item>के भुल्न सक्थ्यौ छम छम गरी राधाले नाचेको</item>
+        <item>पानी मिठो यमुना नदीको</item>
+        <item>भजौ नाम राधा र कृष्णको</item>
+        <item>वंशी बालेको</item>
+        <item>ख्याल माया लाग्दैन हो कृष्ण कालेको</item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+
+    <string-array name="fiftyone_krishna_ko_mahima_gai_rahanu_hola">
+    <item></item>
+        <item>कृष्णको महिमा गाइरहनु होला</item>
+        <item>फेरी फेरी भन्दैमा पाइदैन यो चोला</item>
+        <item></item>
+        <item></item>
+        <item>चौरासी लाख घुमेर आयौ बल्ल यो धर्तीमा</item>
+        <item>पुण्यको फल यो चोला पायौ नफसौं संसारमा</item>
+        <item>कृष्णको महिमा................</item>
+        <item></item>
+        <item></item>
+        <item>उमेर छदै भजन गरौ नभुलौ मायामा</item>
+        <item>प्रभुको नाम जपेर बसौं सितलु छायाँमा</item>
+        <item>कृष्णको महिमा................</item>
+        <item></item>
+        <item></item>
+        <item>तिम्रो र हाम्रो के भन्नु छ र अन्त्यमा छोड्ने हो</item>
+        <item>दुई दिने जीवन भक्तिमा लगाई कृष्णमा जोड्ने हो</item>
+        <item>कृष्णको महिमा................</item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+
+    <string-array name="fiftytwo_k_hola_prabhu_yo_chola">
+        <item></item>
+        <item>के होला प्रभु यो चोला गोविन्द गोविन्द गोपाल</item>
+        <item>राम नाम बोल दिल खोल, सबैलाई यहाँ राम्रै होला</item>
+        <item>श्री कृष्ण गोबिन्द हरे मुरारे हेनाथ नारायण बासुदेव</item>
+    <item></item>
+    <item></item>
+        <item>कहाँ हरि कस्ता छन्‌ त केही थाहा छैन</item>
+        <item>न त चिठ्ठी न त खबर केही आउँदैन</item>
+        <item>के होला प्रभु................</item>
+    <item></item>
+    <item></item>
+        <item>राधा कुण्ड श्याम कुण्ड गिरी गोवर्धन</item>
+        <item>मधुर मधुर वंशी बज्यो सोही वुन्दावन</item>
+        <item>के होला प्रभु................</item>
+    <item></item>
+    <item></item>
+        <item>बनाऊ हामी पाटी पौवा देऊ गरिबलाई खान</item>
+        <item>मरेपछि सजिलो हुन्छ स्वर्ग लोक जान</item>
+        <item>के होला प्रभु................</item>
+        <item>श्री कष्ण गोबिन्द हरे मुरारे हेनाथ नारायण बासुदेव</item>
+    <item></item>
+    <item></item>
+        <item>कैले राम भइ जन्म्यौ केले श्याम भइ</item>
+        <item>भक्तजनको उद्वार गर्छौ धरतीमा आई</item>
+        <item>के होला प्रभु................</item>
+    <item></item>
+    <item></item>
+</string-array>
+
+
+
+
+
+</resources>
