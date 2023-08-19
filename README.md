@@ -1,2 +1,2 @@
 # bhajan_sangraha_app
-# password for keystore is rkant
+# alias of keystore is cert & password of both is rkantrkant
