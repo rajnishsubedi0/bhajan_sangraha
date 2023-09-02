@@ -12,8 +12,8 @@ import android.widget.LinearLayout;
 
 import java.util.ArrayList;
 
-public class BhajanHandler_main extends AppCompatActivity {
-    ArrayList<BhajanDataHolder> arrayList;
+public class SecondMainActivity_ActualBhajanShowingActivity extends AppCompatActivity {
+    ArrayList<Main_DataHolderUsingArraylist> arrayList;
     LinearLayout linearLayout;
     RecyclerView recyclerView;
     
@@ -24,7 +24,7 @@ String[] strings;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_logic);
         recyclerView = findViewById(R.id.recyclerSecondView);
-        arrayList = new ArrayList<BhajanDataHolder>();
+        arrayList = new ArrayList<Main_DataHolderUsingArraylist>();
 
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xff6200ed));
@@ -289,7 +289,7 @@ String[] strings;
 //Starting loop and adding string data to array List
     private void startLoop() {
         for(int i=0;i<strings.length;i++){
-            arrayList.add(new BhajanDataHolder(strings[i]));
+            arrayList.add(new Main_DataHolderUsingArraylist(strings[i]));
         }
         //Calling "setting adapter" method
         setAdapter();
@@ -301,7 +301,7 @@ String[] strings;
     //************************************************************************
 //Setting the adapter
     private void setAdapter() {
-        BhajanHandler_recyclerView bhajanData_recyclerView=new BhajanHandler_recyclerView(arrayList, BhajanHandler_main.this   );
+        SecondView_RecyclerView bhajanData_recyclerView=new SecondView_RecyclerView(arrayList, SecondMainActivity_ActualBhajanShowingActivity.this   );
         RecyclerView.LayoutManager layoutManager=new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(bhajanData_recyclerView);

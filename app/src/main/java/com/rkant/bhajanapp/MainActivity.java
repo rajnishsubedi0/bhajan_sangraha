@@ -22,12 +22,12 @@ public class MainActivity extends AppCompatActivity {
     SearchView searchView;
     RecyclerView recyclerView;
     String[] bhajan_name_nepali,bhajan_name_english;
-    ListHandler_RecyclerView recyclerCustomAdapter;
+    Main_BhajanMenuListRecyclerView recyclerCustomAdapter;
     Boolean backPressed=false;
     ActionBar actionBar;
 
     String[] nepaliNumbers={"१","२","३","४","५","६","७","८","९","१०","११","१२","१३","१४","१५","१६","१७","१८","१९","२०","२१","२२","२३","२४","२५","२६","२७","२८","२९","३०","३१","३२","३३","३४","३५","३६","३७","३८","३९","४०","४१","४२","४३","४४","४५","४६","४७","४८","४९","५०","५१","५२","५३","५४","५५","५६","५७","५८","५९","६०","६१","६२","६३","६४","६५","६६","६७","६८","६९","७०","७१","७२","७३","७४","७५","७६","७७","७८","७९","८०","८१","८२","८३","८४","८५","८६","८७","८८","८९","९०"};
-ArrayList<DataHolder_BhajanMenu> arrayList;
+ArrayList<SecondView_DataHolderUsingArraylist> arrayList;
 AdapterView.OnItemSelectedListener listener;
 
     @Override
@@ -47,7 +47,7 @@ AdapterView.OnItemSelectedListener listener;
 
 
     private void settingAdapter() {
-        recyclerCustomAdapter=new ListHandler_RecyclerView(arrayList,listener,MainActivity.this,nepaliNumbers);
+        recyclerCustomAdapter=new Main_BhajanMenuListRecyclerView(arrayList,listener,MainActivity.this,nepaliNumbers);
         RecyclerView.LayoutManager layoutManager=new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(recyclerCustomAdapter);
@@ -60,7 +60,7 @@ AdapterView.OnItemSelectedListener listener;
         bhajan_name_english=getResources().getStringArray(R.array.list_opening_bhajan_lists_english);
         bhajan_name_nepali =getResources().getStringArray(R.array.list_opening_bhajan_lists);
         for(int i = 0; i< bhajan_name_nepali.length; i++){
-            arrayList.add(new DataHolder_BhajanMenu(bhajan_name_nepali[i],bhajan_name_english[i],i));
+            arrayList.add(new SecondView_DataHolderUsingArraylist(bhajan_name_nepali[i],bhajan_name_english[i],i));
         }
 
     }
@@ -83,9 +83,9 @@ AdapterView.OnItemSelectedListener listener;
 
             @Override
             public boolean onQueryTextChange(String s) {
-                ArrayList<DataHolder_BhajanMenu> filteredList=new ArrayList<>();
+                ArrayList<SecondView_DataHolderUsingArraylist> filteredList=new ArrayList<>();
                 for(int a=0; a< arrayList.size(); a++){
-                    DataHolder_BhajanMenu item=arrayList.get(a);
+                    SecondView_DataHolderUsingArraylist item=arrayList.get(a);
                     if (item.getBhajan_name_nepali().toLowerCase().contains(s.toString().toLowerCase()) || item.getBhajan_name_english().toLowerCase().contains(s.toString().toLowerCase()) ){
                         filteredList.add(item);
                     }

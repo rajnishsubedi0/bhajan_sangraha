@@ -11,8 +11,8 @@ import androidx.annotation.NonNull;
 
 import java.util.ArrayList;
 
-public class BhajanHandler_recyclerView extends androidx.recyclerview.widget.RecyclerView.Adapter<BhajanHandler_recyclerView.MyViewHolder>{
-    private ArrayList<BhajanDataHolder> arrayList;
+public class SecondView_RecyclerView extends androidx.recyclerview.widget.RecyclerView.Adapter<SecondView_RecyclerView.MyViewHolder>{
+    private ArrayList<Main_DataHolderUsingArraylist> arrayList;
     // initilizing linearlayout to set onTouchListener
     private LinearLayout linearLayout;
 
@@ -22,7 +22,7 @@ public class BhajanHandler_recyclerView extends androidx.recyclerview.widget.Rec
 
     private Context context;
 
-    public BhajanHandler_recyclerView(ArrayList<BhajanDataHolder> arrayList, Context context){
+    public SecondView_RecyclerView(ArrayList<Main_DataHolderUsingArraylist> arrayList, Context context){
         this.arrayList=arrayList;
         this.context=context;
 
@@ -41,14 +41,14 @@ public class BhajanHandler_recyclerView extends androidx.recyclerview.widget.Rec
     }
     @NonNull
     @Override
-    public BhajanHandler_recyclerView.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public SecondView_RecyclerView.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View itemView= LayoutInflater.from(parent.getContext()).inflate(R.layout.logics_recycler_holder,parent,false);
-        return new BhajanHandler_recyclerView.MyViewHolder(itemView);
+        return new SecondView_RecyclerView.MyViewHolder(itemView);
 
     }
 
     @Override
-    public void onBindViewHolder(@NonNull BhajanHandler_recyclerView.MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull SecondView_RecyclerView.MyViewHolder holder, int position) {
         String string=arrayList.get(position).getString();
         holder.textView.setText(string);
 

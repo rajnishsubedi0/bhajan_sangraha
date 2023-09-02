@@ -1,6 +1,6 @@
 package com.rkant.bhajanapp;
 
-public class BhajanDataHolder {
+public class Main_DataHolderUsingArraylist {
     public String getString() {
         return string;
     }
@@ -10,7 +10,7 @@ public class BhajanDataHolder {
     }
 
     String string;
-    public BhajanDataHolder(String string){
+    public Main_DataHolderUsingArraylist(String string){
         this.string=string;
     }
 }

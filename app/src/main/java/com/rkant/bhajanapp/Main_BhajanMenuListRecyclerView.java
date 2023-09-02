@@ -11,12 +11,12 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import java.util.ArrayList;
-public class ListHandler_RecyclerView extends androidx.recyclerview.widget.RecyclerView.Adapter<ListHandler_RecyclerView.MyViewHolder>{
-    private ArrayList<DataHolder_BhajanMenu> arrayList;
+public class Main_BhajanMenuListRecyclerView extends androidx.recyclerview.widget.RecyclerView.Adapter<Main_BhajanMenuListRecyclerView.MyViewHolder>{
+    private ArrayList<SecondView_DataHolderUsingArraylist> arrayList;
     AdapterView.OnItemSelectedListener listener;
     Context context;
     String[] nepaliNumbers;
-    public ListHandler_RecyclerView(ArrayList<DataHolder_BhajanMenu> arrayList, AdapterView.OnItemSelectedListener listener, Context context, String[] nepaliNumbers){
+    public Main_BhajanMenuListRecyclerView(ArrayList<SecondView_DataHolderUsingArraylist> arrayList, AdapterView.OnItemSelectedListener listener, Context context, String[] nepaliNumbers){
         this.arrayList=arrayList;
         this.listener=listener;
         this.context=context;
@@ -39,13 +39,13 @@ public class ListHandler_RecyclerView extends androidx.recyclerview.widget.Recyc
 
     @NonNull
     @Override
-    public ListHandler_RecyclerView.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public Main_BhajanMenuListRecyclerView.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View itemView= LayoutInflater.from(parent.getContext()).inflate(R.layout.list_layout,parent,false);
         return new MyViewHolder(itemView);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ListHandler_RecyclerView.MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull Main_BhajanMenuListRecyclerView.MyViewHolder holder, int position) {
         String string=arrayList.get(position).getBhajan_name_nepali();
         int number=arrayList.get(position).getInteger();
         holder.textView.setText(string);
@@ -53,7 +53,7 @@ public class ListHandler_RecyclerView extends androidx.recyclerview.widget.Recyc
         holder.linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-           Intent intent= new Intent(context, BhajanHandler_main.class);
+           Intent intent= new Intent(context, SecondMainActivity_ActualBhajanShowingActivity.class);
            intent.putExtra("position",number);
            context.startActivity(intent);
                             }
@@ -65,7 +65,7 @@ public class ListHandler_RecyclerView extends androidx.recyclerview.widget.Recyc
     public int getItemCount() {
         return arrayList.size();
     }
-    public void filterList(ArrayList<DataHolder_BhajanMenu> filteredList){
+    public void filterList(ArrayList<SecondView_DataHolderUsingArraylist> filteredList){
         arrayList=filteredList;
         notifyDataSetChanged();
     }
