@@ -15,6 +15,9 @@ import android.view.MenuItem;
 import android.widget.AdapterView;
 import android.widget.SearchView;
 
+import com.rkant.bhajanapp.FirstActivities.Main_BhajanMenuListRecyclerView;
+import com.rkant.bhajanapp.secondActivities.SecondView_DataHolderUsingArraylist;
+
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {

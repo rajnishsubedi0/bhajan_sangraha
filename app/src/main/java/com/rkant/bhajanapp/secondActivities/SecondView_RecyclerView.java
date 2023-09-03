@@ -1,4 +1,4 @@
-package com.rkant.bhajanapp;
+package com.rkant.bhajanapp.secondActivities;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,6 +8,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+
+import com.rkant.bhajanapp.FirstActivities.Main_DataHolderUsingArraylist;
+import com.rkant.bhajanapp.R;
 
 import java.util.ArrayList;
 

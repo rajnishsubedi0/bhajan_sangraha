@@ -1,4 +1,4 @@
-package com.rkant.bhajanapp;
+package com.rkant.bhajanapp.FirstActivities;
 
 public class Main_DataHolderUsingArraylist {
     public String getString() {

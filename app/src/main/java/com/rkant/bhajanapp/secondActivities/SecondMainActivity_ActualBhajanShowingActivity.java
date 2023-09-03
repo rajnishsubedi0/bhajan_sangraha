@@ -1,4 +1,4 @@
-package com.rkant.bhajanapp;
+package com.rkant.bhajanapp.secondActivities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -9,6 +9,9 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
+
+import com.rkant.bhajanapp.FirstActivities.Main_DataHolderUsingArraylist;
+import com.rkant.bhajanapp.R;
 
 import java.util.ArrayList;
 

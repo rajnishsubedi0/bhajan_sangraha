@@ -1,4 +1,4 @@
-package com.rkant.bhajanapp;
+package com.rkant.bhajanapp.FirstActivities;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,6 +10,11 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+
+import com.rkant.bhajanapp.R;
+import com.rkant.bhajanapp.secondActivities.SecondMainActivity_ActualBhajanShowingActivity;
+import com.rkant.bhajanapp.secondActivities.SecondView_DataHolderUsingArraylist;
+
 import java.util.ArrayList;
 public class Main_BhajanMenuListRecyclerView extends androidx.recyclerview.widget.RecyclerView.Adapter<Main_BhajanMenuListRecyclerView.MyViewHolder>{
     private ArrayList<SecondView_DataHolderUsingArraylist> arrayList;

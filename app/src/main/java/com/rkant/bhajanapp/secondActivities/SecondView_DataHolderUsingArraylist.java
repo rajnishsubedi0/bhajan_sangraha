@@ -1,4 +1,4 @@
-package com.rkant.bhajanapp;
+package com.rkant.bhajanapp.secondActivities;
 
 public class SecondView_DataHolderUsingArraylist {
 
