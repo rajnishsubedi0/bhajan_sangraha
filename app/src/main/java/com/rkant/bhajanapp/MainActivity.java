@@ -12,6 +12,7 @@ import android.os.Handler;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.SearchView;
 
@@ -41,6 +42,10 @@ AdapterView.OnItemSelectedListener listener;
         arrayList=new ArrayList<>();
         addingData();
         settingAdapter();
+
+        //Removing actionbar
+        //getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
+        //getActionBar().hide();
 
 
         // Changing Action Bar colour
