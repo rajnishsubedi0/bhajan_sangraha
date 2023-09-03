@@ -43,10 +43,6 @@ AdapterView.OnItemSelectedListener listener;
         addingData();
         settingAdapter();
 
-        //Removing actionbar
-        //getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
-        //getActionBar().hide();
-
 
         // Changing Action Bar colour
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xff6200ed));
