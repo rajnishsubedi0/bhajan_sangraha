@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     String[] bhajan_name_nepali,bhajan_name_english;
     Main_BhajanMenuListRecyclerView recyclerCustomAdapter;
     Boolean backPressed=false;
-    ActionBar actionBar;
+
 
     String[] nepaliNumbers={"१","२","३","४","५","६","७","८","९","१०","११","१२","१३","१४","१५","१६","१७","१८","१९","२०","२१","२२","२३","२४","२५","२६","२७","२८","२९","३०","३१","३२","३३","३४","३५","३६","३७","३८","३९","४०","४१","४२","४३","४४","४५","४६","४७","४८","४९","५०","५१","५२","५३","५४","५५","५६","५७","५८","५९","६०","६१","६२","६३","६४","६५","६६","६७","६८","६९","७०","७१","७२","७३","७४","७५","७६","७७","७८","७९","८०","८१","८२","८३","८४","८५","८६","८७","८८","८९","९०"};
 ArrayList<SecondView_DataHolderUsingArraylist> arrayList;
@@ -41,23 +41,23 @@ AdapterView.OnItemSelectedListener listener;
         recyclerView=findViewById(R.id.recyclerView);
         arrayList=new ArrayList<>();
         addingData();
-        settingAdapter();
+//        settingAdapter();
 
 
         // Changing Action Bar colour
-        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xff6200ed));
+//        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xff6200ed));
     }
 
 
 
-    private void settingAdapter() {
-        recyclerCustomAdapter=new Main_BhajanMenuListRecyclerView(arrayList,listener,MainActivity.this,nepaliNumbers);
-        RecyclerView.LayoutManager layoutManager=new LinearLayoutManager(getApplicationContext());
-        recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setAdapter(recyclerCustomAdapter);
-
-
-    }
+//    private void settingAdapter() {
+//        recyclerCustomAdapter=new Main_BhajanMenuListRecyclerView(arrayList,listener,MainActivity.this,nepaliNumbers);
+//        RecyclerView.LayoutManager layoutManager=new LinearLayoutManager(getApplicationContext());
+//        recyclerView.setLayoutManager(layoutManager);
+//        recyclerView.setAdapter(recyclerCustomAdapter);
+//
+//
+//    }
 
 
     private void addingData() {
@@ -69,43 +69,43 @@ AdapterView.OnItemSelectedListener listener;
 
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater menuInflater=getMenuInflater();
-        menuInflater.inflate(R.menu.menu_search,menu);
-        menuItem =menu.findItem(R.id.search_bar);
-        searchView= (SearchView) MenuItemCompat.getActionView(menuItem);
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-
-            @Override
-            public boolean onQueryTextSubmit(String s) {
-                menuItem.collapseActionView();
-                searchView.onActionViewCollapsed();
-
-                return false;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String s) {
-                ArrayList<SecondView_DataHolderUsingArraylist> filteredList=new ArrayList<>();
-                for(int a=0; a< arrayList.size(); a++){
-                    SecondView_DataHolderUsingArraylist item=arrayList.get(a);
-                    if (item.getBhajan_name_nepali().toLowerCase().contains(s.toString().toLowerCase()) || item.getBhajan_name_english().toLowerCase().contains(s.toString().toLowerCase()) ){
-                        filteredList.add(item);
-                    }
-                }
-                recyclerCustomAdapter.filterList(filteredList);
-                return false;
-            }
-
-        });
-
-
-
-
-
-        return super.onCreateOptionsMenu(menu);
-    }
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        MenuInflater menuInflater=getMenuInflater();
+//        menuInflater.inflate(R.menu.menu_search,menu);
+//        menuItem =menu.findItem(R.id.search_bar);
+//        searchView= (SearchView) MenuItemCompat.getActionView(menuItem);
+//        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+//
+//            @Override
+//            public boolean onQueryTextSubmit(String s) {
+//                menuItem.collapseActionView();
+//                searchView.onActionViewCollapsed();
+//
+//                return false;
+//            }
+//
+//            @Override
+//            public boolean onQueryTextChange(String s) {
+//                ArrayList<SecondView_DataHolderUsingArraylist> filteredList=new ArrayList<>();
+//                for(int a=0; a< arrayList.size(); a++){
+//                    SecondView_DataHolderUsingArraylist item=arrayList.get(a);
+//                    if (item.getBhajan_name_nepali().toLowerCase().contains(s.toString().toLowerCase()) || item.getBhajan_name_english().toLowerCase().contains(s.toString().toLowerCase()) ){
+//                        filteredList.add(item);
+//                    }
+//                }
+//                recyclerCustomAdapter.filterList(filteredList);
+//                return false;
+//            }
+//
+//        });
+//
+//
+//
+//
+//
+//        return super.onCreateOptionsMenu(menu);
+//    }
 
     @Override
     public void onBackPressed() {

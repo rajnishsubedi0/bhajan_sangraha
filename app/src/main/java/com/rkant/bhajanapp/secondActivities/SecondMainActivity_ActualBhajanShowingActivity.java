@@ -4,11 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.rkant.bhajanapp.FirstActivities.Main_DataHolderUsingArraylist;
 import com.rkant.bhajanapp.R;
@@ -29,12 +31,8 @@ String[] strings;
         recyclerView = findViewById(R.id.recyclerSecondView);
         arrayList = new ArrayList<Main_DataHolderUsingArraylist>();
 
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xff6200ed));
-        setData();
-
-
-
+     getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+       setData();
 
 
 
@@ -57,11 +55,13 @@ String[] strings;
     // Setting Data for Recycler view by checking what value is coming through intend so we could assign that intend value to the value in our database
     // and launch new activity accordingly
     private void setData(){
-        Integer integer = null;
         Bundle bundle=getIntent().getExtras();
-        if (bundle!=null){
-            integer=bundle.getInt("position");
-            if (integer==0){
+        String str=bundle.getString("key");
+        int integer=Integer.parseInt(str);
+        Toast.makeText(this, ""+integer+"", Toast.LENGTH_SHORT).show();
+
+
+           if (integer==0){
                 strings=getResources().getStringArray(R.array.zero_ganapati);
                 startLoop();
             }
@@ -284,7 +284,7 @@ String[] strings;
         }
     // Checking all things finished
 
-    }//----------------------------------------------------------------
+    //----------------------------------------------------------------
 
 
 
@@ -304,10 +304,11 @@ String[] strings;
     //************************************************************************
 //Setting the adapter
     private void setAdapter() {
-        SecondView_RecyclerView bhajanData_recyclerView=new SecondView_RecyclerView(arrayList, SecondMainActivity_ActualBhajanShowingActivity.this   );
+        SecondView_RecyclerView bhajanData_recyclerView=new SecondView_RecyclerView(arrayList,getApplicationContext()   );
         RecyclerView.LayoutManager layoutManager=new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(bhajanData_recyclerView);
     }
 //******************************************************
+
 }

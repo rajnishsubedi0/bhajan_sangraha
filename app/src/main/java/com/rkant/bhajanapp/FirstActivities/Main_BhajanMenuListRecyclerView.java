@@ -2,6 +2,7 @@ package com.rkant.bhajanapp.FirstActivities;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,22 +20,28 @@ import java.util.ArrayList;
 public class Main_BhajanMenuListRecyclerView extends androidx.recyclerview.widget.RecyclerView.Adapter<Main_BhajanMenuListRecyclerView.MyViewHolder>{
     private ArrayList<SecondView_DataHolderUsingArraylist> arrayList;
     AdapterView.OnItemSelectedListener listener;
+
     Context context;
     String[] nepaliNumbers;
+
     public Main_BhajanMenuListRecyclerView(ArrayList<SecondView_DataHolderUsingArraylist> arrayList, AdapterView.OnItemSelectedListener listener, Context context, String[] nepaliNumbers){
         this.arrayList=arrayList;
         this.listener=listener;
         this.context=context;
         this.nepaliNumbers=nepaliNumbers;
+
+
     }
 
 
 
     public class MyViewHolder extends androidx.recyclerview.widget.RecyclerView.ViewHolder {
         TextView textView,textViewNepaliNumber;
+
         LinearLayout linearLayout;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
+
             textView=itemView.findViewById(R.id.textView);
             linearLayout=itemView.findViewById(R.id.layout_name);
             textViewNepaliNumber=itemView.findViewById(R.id.textViewNepaliNumber);
@@ -51,20 +58,27 @@ public class Main_BhajanMenuListRecyclerView extends androidx.recyclerview.widge
 
     @Override
     public void onBindViewHolder(@NonNull Main_BhajanMenuListRecyclerView.MyViewHolder holder, int position) {
-        String string=arrayList.get(position).getBhajan_name_nepali();
-        int number=arrayList.get(position).getInteger();
+        String string=arrayList.get(holder.getAdapterPosition()).getBhajan_name_nepali();
+        int number=arrayList.get(holder.getAdapterPosition()).getInteger();
+        String clickedPositon=String.valueOf(holder.getAdapterPosition());
+
         holder.textView.setText(string);
-        holder.textViewNepaliNumber.setText(nepaliNumbers[position]);
+        holder.textViewNepaliNumber.setText(nepaliNumbers[holder.getAdapterPosition()]);
         holder.linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-           Intent intent= new Intent(context, SecondMainActivity_ActualBhajanShowingActivity.class);
-           intent.putExtra("position",number);
-           context.startActivity(intent);
-                            }
+                Intent intent=new Intent(context, SecondMainActivity_ActualBhajanShowingActivity.class);
+                Bundle bundle=new Bundle();
+                bundle.putString("key",clickedPositon);
+                intent.putExtras(bundle);
+                context.startActivity(intent);
+            }
         });
 
+
+
     }
+
 
     @Override
     public int getItemCount() {
@@ -74,5 +88,6 @@ public class Main_BhajanMenuListRecyclerView extends androidx.recyclerview.widge
         arrayList=filteredList;
         notifyDataSetChanged();
     }
+    
 
 }
