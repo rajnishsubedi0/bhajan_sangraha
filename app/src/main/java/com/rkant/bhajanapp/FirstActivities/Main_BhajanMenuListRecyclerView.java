@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
@@ -51,15 +52,15 @@ public class Main_BhajanMenuListRecyclerView extends androidx.recyclerview.widge
 
     @Override
     public void onBindViewHolder(@NonNull Main_BhajanMenuListRecyclerView.MyViewHolder holder, int position) {
-        String string=arrayList.get(position).getBhajan_name_nepali();
-        int number=arrayList.get(position).getInteger();
+        String string=arrayList.get(holder.getAdapterPosition()).getBhajan_name_nepali();
+        int number=arrayList.get(holder.getAdapterPosition()).getInteger();
         holder.textView.setText(string);
-        holder.textViewNepaliNumber.setText(nepaliNumbers[position]);
+        holder.textViewNepaliNumber.setText(nepaliNumbers[holder.getAdapterPosition()]);
         holder.linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
            Intent intent= new Intent(context, SecondMainActivity_ActualBhajanShowingActivity.class);
-           intent.putExtra("position",number);
+           intent.putExtra("position",string);
            context.startActivity(intent);
                             }
         });
