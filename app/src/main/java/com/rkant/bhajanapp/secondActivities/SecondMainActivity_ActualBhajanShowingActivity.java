@@ -63,9 +63,18 @@ String[] bhajanStringArrayFromResources;
         Bundle bundle=getIntent().getExtras();
         if (bundle!=null){
             string=bundle.getString("position");
-            
-            if (string.equalsIgnoreCase("गणपति भक्त लगाउ पार")){
+
+            if (string.equalsIgnoreCase("जगिदश्वर जय अभिनाशी")){
+                bhajanStringArrayFromResources =getResources().getStringArray(R.array.jaya_jagadisara_jaya_abinashi);
+                startLoop();
+            }
+            else if (string.equalsIgnoreCase("गणपति भक्त लगाउ पार")){
                 bhajanStringArrayFromResources =getResources().getStringArray(R.array.zero_ganapati);
+                startLoop();
+            }
+
+            else if (string.equalsIgnoreCase("जगिदश्वर जय अभिनाशी")){
+                bhajanStringArrayFromResources =getResources().getStringArray(R.array.jaya_jagadisara_jaya_abinashi);
                 startLoop();
             }
             else if (string.equalsIgnoreCase("गोविन्द जय जय, गोपाल जय जय")){

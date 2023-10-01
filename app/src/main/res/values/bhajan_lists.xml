@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="list_opening_bhajan_lists">
-    <item>गणपति भक्त लगाउ पार</item>
+        <item>जगिदश्वर जय अभिनाशी</item>
+        <item>गणपति भक्त लगाउ पार</item>
     <item>गोविन्द जय जय, गोपाल जय जय</item>
     <item>नाँचे कृष्णजी छमछम नाँचे कृष्णजी</item>
     <item>कृष्ण गए बनैमा</item>
@@ -56,6 +57,7 @@
 
     </string-array>
     <string-array name="list_opening_bhajan_lists_english">
+        <item>jay gajadishwora jay abhinasi jaya jagadishwora jag dishora disora jyajagadishora jayajaga jayagaja jayjaga abinasi</item>
         <item>ganapati bhakta lagau par gana pati</item>
         <item>gobinda jaya jaya gopal jaya jaya govinda jaya jaya</item>
         <item>nachhe krishna jee chham chham nache krishna jee cham cham</item>
