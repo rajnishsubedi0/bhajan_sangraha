@@ -288,6 +288,14 @@ String[] bhajanStringArrayFromResources;
                 bhajanStringArrayFromResources =getResources().getStringArray(R.array.fiftytwo_k_hola_prabhu_yo_chola);
                 startLoop();
             }
+            else if (string.equalsIgnoreCase("आईदेउन कृष्णजी हाम्राे मनैमा")){
+                bhajanStringArrayFromResources =getResources().getStringArray(R.array.aaideuna_krishna_jee_hamro_manaima);
+                startLoop();
+            }
+            else if (string.equalsIgnoreCase("मुटुमेरो सारै जालायौ हरी")){
+                bhajanStringArrayFromResources=getResources().getStringArray(R.array.mutu_mero_sarai_jalayeu);
+                startLoop();
+            }
             //for error handling
             else{
                 Toast.makeText(this, "No data passed \"Error occured\"", Toast.LENGTH_SHORT).show();

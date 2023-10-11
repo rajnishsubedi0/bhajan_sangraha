@@ -54,7 +54,8 @@
         <item>वंशी मीठो कृष्णले बजाको</item>
         <item>कृष्णको महिमा गाइरहनु होला</item>
         <item>के होला प्रभु यो चोला</item>
-
+        <item>आईदेउन कृष्णजी हाम्राे मनैमा</item>
+        <item>मुटुमेरो सारै जालायौ हरी</item>
     </string-array>
     <string-array name="list_opening_bhajan_lists_english">
         <item>jay gajadishwora jay abhinasi jaya jagadishwora jag dishora disora jyajagadishora jayajaga jayagaja jayjaga abinasi</item>
@@ -85,7 +86,6 @@
         <item>aage aage bashuri wala paxi paxi age age </item>
         <item>jai jai ho bhole baba jay jay ho bhole baba vole baba bholebaba volebaba jaya jaya ho</item>
         <item>ram lai aaghi ma laula aghi lamla lam</item>
-        <item>guru bina gyan kaile mildaina kahile ghyan gan</item>
         <item>jaya ramanuja jai ramanuja jay ramanuja</item>
         <item>guru bina gyan kaile mildaina kahile ghyan gan</item>
         <item>hey krishna malai mitho banshi ma lai mito bansi bamsi he krishna</item>
@@ -111,7 +111,7 @@
         <item>banshi mitho krishna le bajako bamshi mitho baamshi mitho baanshi mitho bajaako bamsi bansi</item>
         <item>krishna ko mahima gai rahanu hola maahima gaairahanu gairahanu gairanu gai ranu </item>
         <item>ke hola prabhu yo chola ke hoola pravu prabu chhola choola k hola prabhu khola prabhu kehola prabhu</item>
-
-
+        <item>aaideuna krishnajee aideuna krishnaji krishna ji krishna jee hemro manaima hamro manma hamromanaima hamromanma brindabanaima brindabanma vrindabanma brinda banaima</item>
+        <item>mutumero sarai jalayeu mutu mero sarai jalayeu mutu merosarai jalayeu nata aayeu nata bolayeu</item>
 </string-array>
 </resources>
