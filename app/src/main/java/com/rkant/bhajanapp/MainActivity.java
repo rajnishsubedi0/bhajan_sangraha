@@ -14,6 +14,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.AdapterView;
 import android.widget.SearchView;
+import android.widget.Toast;
 
 import com.rkant.bhajanapp.FirstActivities.RecyclerAdapter;
 import com.rkant.bhajanapp.secondActivities.DataHolder;
@@ -41,6 +42,7 @@ AdapterView.OnItemSelectedListener listener;
         arrayList=new ArrayList<>();
         addingData();
         settingAdapter();
+
 
 
         // Changing Action Bar colour
@@ -110,22 +112,21 @@ AdapterView.OnItemSelectedListener listener;
     public void onBackPressed() {
         menuItem.collapseActionView();
         searchView.onActionViewCollapsed();
-        if(backPressed){
-        super.onBackPressed();}
-        else {backPressed=true;
+        if (backPressed) {
+            super.onBackPressed();
+        } else {
+            backPressed = true;
+
         }
         new Handler().postDelayed(new Runnable() {
+
             @Override
             public void run() {
-                backPressed=false;
+                backPressed = false;
             }
         }, 2500);
 
-
-
-
     }
-
 
     }
 
