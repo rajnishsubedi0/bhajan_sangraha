@@ -1,6 +1,6 @@
 package com.rkant.bhajanapp.secondActivities;
 
-public class SecondView_DataHolderUsingArraylist {
+public class DataHolder {
 
     String bhajan_name_nepali;
 
@@ -23,7 +23,7 @@ public class SecondView_DataHolderUsingArraylist {
     }
 
     int integer;
-    public SecondView_DataHolderUsingArraylist(String bhajan_name_nepali, String bhajan_name_english, int integer){
+    public DataHolder(String bhajan_name_nepali, String bhajan_name_english, int integer){
         this.bhajan_name_nepali =bhajan_name_nepali;
         this.bhajan_name_english=bhajan_name_english;
         this.integer=integer;

@@ -12,7 +12,7 @@
         android:theme="@style/Theme.BhajanSangraha"
         tools:targetApi="31">
         <activity
-            android:name=".secondActivities.SecondMainActivity_ActualBhajanShowingActivity"
+            android:name=".secondActivities.SecondActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

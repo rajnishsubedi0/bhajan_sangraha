@@ -8,21 +8,20 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
 import com.rkant.bhajanapp.R;
-import com.rkant.bhajanapp.secondActivities.SecondMainActivity_ActualBhajanShowingActivity;
-import com.rkant.bhajanapp.secondActivities.SecondView_DataHolderUsingArraylist;
+import com.rkant.bhajanapp.secondActivities.SecondActivity;
+import com.rkant.bhajanapp.secondActivities.DataHolder;
 
 import java.util.ArrayList;
-public class Main_BhajanMenuListRecyclerView extends androidx.recyclerview.widget.RecyclerView.Adapter<Main_BhajanMenuListRecyclerView.MyViewHolder>{
-    private ArrayList<SecondView_DataHolderUsingArraylist> arrayList;
+public class RecyclerAdapter extends androidx.recyclerview.widget.RecyclerView.Adapter<RecyclerAdapter.MyViewHolder>{
+    private ArrayList<DataHolder> arrayList;
     AdapterView.OnItemSelectedListener listener;
     Context context;
     String[] nepaliNumbers;
-    public Main_BhajanMenuListRecyclerView(ArrayList<SecondView_DataHolderUsingArraylist> arrayList, AdapterView.OnItemSelectedListener listener, Context context, String[] nepaliNumbers){
+    public RecyclerAdapter(ArrayList<DataHolder> arrayList, AdapterView.OnItemSelectedListener listener, Context context, String[] nepaliNumbers){
         this.arrayList=arrayList;
         this.listener=listener;
         this.context=context;
@@ -45,13 +44,13 @@ public class Main_BhajanMenuListRecyclerView extends androidx.recyclerview.widge
 
     @NonNull
     @Override
-    public Main_BhajanMenuListRecyclerView.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public RecyclerAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View itemView= LayoutInflater.from(parent.getContext()).inflate(R.layout.list_layout,parent,false);
         return new MyViewHolder(itemView);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull Main_BhajanMenuListRecyclerView.MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull RecyclerAdapter.MyViewHolder holder, int position) {
         String string=arrayList.get(holder.getAdapterPosition()).getBhajan_name_nepali();
         int number=arrayList.get(holder.getAdapterPosition()).getInteger();
         holder.textView.setText(string);
@@ -59,7 +58,7 @@ public class Main_BhajanMenuListRecyclerView extends androidx.recyclerview.widge
         holder.linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-           Intent intent= new Intent(context, SecondMainActivity_ActualBhajanShowingActivity.class);
+           Intent intent= new Intent(context, SecondActivity.class);
            intent.putExtra("position",string);
            context.startActivity(intent);
                             }
@@ -71,7 +70,7 @@ public class Main_BhajanMenuListRecyclerView extends androidx.recyclerview.widge
     public int getItemCount() {
         return arrayList.size();
     }
-    public void filterList(ArrayList<SecondView_DataHolderUsingArraylist> filteredList){
+    public void filterList(ArrayList<DataHolder> filteredList){
         arrayList=filteredList;
         notifyDataSetChanged();
     }

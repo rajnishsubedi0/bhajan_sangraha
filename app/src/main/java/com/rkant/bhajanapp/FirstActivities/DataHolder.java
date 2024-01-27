@@ -1,6 +1,6 @@
 package com.rkant.bhajanapp.FirstActivities;
 
-public class Main_DataHolderUsingArraylist {
+public class DataHolder {
     public String getString() {
         return string;
     }
@@ -10,7 +10,7 @@ public class Main_DataHolderUsingArraylist {
     }
 
     String string;
-    public Main_DataHolderUsingArraylist(String string){
+    public DataHolder(String string){
         this.string=string;
     }
 }

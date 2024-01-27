@@ -9,13 +9,13 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 
-import com.rkant.bhajanapp.FirstActivities.Main_DataHolderUsingArraylist;
+import com.rkant.bhajanapp.FirstActivities.DataHolder;
 import com.rkant.bhajanapp.R;
 
 import java.util.ArrayList;
 
-public class SecondView_RecyclerView extends androidx.recyclerview.widget.RecyclerView.Adapter<SecondView_RecyclerView.MyViewHolder>{
-    private ArrayList<Main_DataHolderUsingArraylist> arrayList;
+public class RecyclerAdapter extends androidx.recyclerview.widget.RecyclerView.Adapter<RecyclerAdapter.MyViewHolder>{
+    private ArrayList<DataHolder> arrayList;
     // initilizing linearlayout to set onTouchListener
     private LinearLayout linearLayout;
 
@@ -25,7 +25,7 @@ public class SecondView_RecyclerView extends androidx.recyclerview.widget.Recycl
 
     private Context context;
 
-    public SecondView_RecyclerView(ArrayList<Main_DataHolderUsingArraylist> arrayList, Context context){
+    public RecyclerAdapter(ArrayList<DataHolder> arrayList, Context context){
         this.arrayList=arrayList;
         this.context=context;
 
@@ -44,14 +44,14 @@ public class SecondView_RecyclerView extends androidx.recyclerview.widget.Recycl
     }
     @NonNull
     @Override
-    public SecondView_RecyclerView.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public RecyclerAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View itemView= LayoutInflater.from(parent.getContext()).inflate(R.layout.logics_recycler_holder,parent,false);
-        return new SecondView_RecyclerView.MyViewHolder(itemView);
+        return new RecyclerAdapter.MyViewHolder(itemView);
 
     }
 
     @Override
-    public void onBindViewHolder(@NonNull SecondView_RecyclerView.MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull RecyclerAdapter.MyViewHolder holder, int position) {
         String string=arrayList.get(position).getString();
         holder.textView.setText(string);
 
