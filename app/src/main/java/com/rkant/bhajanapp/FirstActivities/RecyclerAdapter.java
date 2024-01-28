@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
@@ -19,6 +20,7 @@ import java.util.ArrayList;
 public class RecyclerAdapter extends androidx.recyclerview.widget.RecyclerView.Adapter<RecyclerAdapter.MyViewHolder>{
     private ArrayList<DataHolder> arrayList;
     AdapterView.OnItemSelectedListener listener;
+    DB_Handler dbHandler;
     Context context;
     String[] nepaliNumbers;
     public RecyclerAdapter(ArrayList<DataHolder> arrayList, AdapterView.OnItemSelectedListener listener, Context context, String[] nepaliNumbers){
@@ -55,6 +57,17 @@ public class RecyclerAdapter extends androidx.recyclerview.widget.RecyclerView.A
         int number=arrayList.get(holder.getAdapterPosition()).getInteger();
         holder.textView.setText(string);
         holder.textViewNepaliNumber.setText(nepaliNumbers[holder.getAdapterPosition()]);
+
+        holder.linearLayout.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+            dbHandler=new DB_Handler(context.getApplicationContext());
+            dbHandler.addData(""+holder.getAdapterPosition());
+                Toast.makeText(context, "Data Added", Toast.LENGTH_SHORT).show();
+
+                return false;
+            }
+        });
         holder.linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
