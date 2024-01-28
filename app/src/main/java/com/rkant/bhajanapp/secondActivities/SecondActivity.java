@@ -24,7 +24,7 @@ String[] bhajanStringArrayFromResources;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_logic);
+        setContentView(R.layout.activity_second);
         recyclerView = findViewById(R.id.recyclerSecondView);
         arrayList = new ArrayList<DataHolder>();
 

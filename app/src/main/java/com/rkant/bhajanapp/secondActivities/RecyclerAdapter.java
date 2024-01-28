@@ -45,7 +45,7 @@ public class RecyclerAdapter extends androidx.recyclerview.widget.RecyclerView.A
     @NonNull
     @Override
     public RecyclerAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View itemView= LayoutInflater.from(parent.getContext()).inflate(R.layout.logics_recycler_holder,parent,false);
+        View itemView= LayoutInflater.from(parent.getContext()).inflate(R.layout.show_bhajan,parent,false);
         return new RecyclerAdapter.MyViewHolder(itemView);
 
     }

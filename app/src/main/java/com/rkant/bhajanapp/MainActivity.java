@@ -1,11 +1,13 @@
 package com.rkant.bhajanapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.MenuItemCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Handler;
@@ -16,13 +18,14 @@ import android.widget.AdapterView;
 import android.widget.SearchView;
 import android.widget.Toast;
 
+import com.rkant.bhajanapp.Favourite_Bhajans.FavouriteBhajans;
 import com.rkant.bhajanapp.FirstActivities.RecyclerAdapter;
 import com.rkant.bhajanapp.secondActivities.DataHolder;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-        MenuItem menuItem;
+        MenuItem menuItem_searchbar,menuItem_favourite;
     SearchView searchView;
     RecyclerView recyclerView;
     String[] bhajan_name_nepali,bhajan_name_english;
@@ -74,13 +77,25 @@ AdapterView.OnItemSelectedListener listener;
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater=getMenuInflater();
         menuInflater.inflate(R.menu.menu_search,menu);
-        menuItem =menu.findItem(R.id.search_bar);
-        searchView= (SearchView) MenuItemCompat.getActionView(menuItem);
+        menuItem_searchbar =menu.findItem(R.id.search_bar);
+        menuItem_favourite=menu.findItem(R.id.menu_favourite);
+        searchView= (SearchView) menuItem_searchbar.getActionView();
+
+
+        menuItem_favourite.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(@NonNull MenuItem menuItem) {
+                Intent intent=new Intent(MainActivity.this, FavouriteBhajans.class);
+                startActivity(intent);
+                return false;
+            }
+        });
+
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
 
             @Override
             public boolean onQueryTextSubmit(String s) {
-                menuItem.collapseActionView();
+                menuItem_searchbar.collapseActionView();
                 searchView.onActionViewCollapsed();
 
                 return false;
@@ -110,7 +125,7 @@ AdapterView.OnItemSelectedListener listener;
 
     @Override
     public void onBackPressed() {
-        menuItem.collapseActionView();
+        menuItem_searchbar.collapseActionView();
         searchView.onActionViewCollapsed();
         if (backPressed) {
             super.onBackPressed();

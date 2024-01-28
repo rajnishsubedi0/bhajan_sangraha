@@ -45,7 +45,7 @@ public class RecyclerAdapter extends androidx.recyclerview.widget.RecyclerView.A
     @NonNull
     @Override
     public RecyclerAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View itemView= LayoutInflater.from(parent.getContext()).inflate(R.layout.list_layout,parent,false);
+        View itemView= LayoutInflater.from(parent.getContext()).inflate(R.layout.bhajan_choosing_lists,parent,false);
         return new MyViewHolder(itemView);
     }
 

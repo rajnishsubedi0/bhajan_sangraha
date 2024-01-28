@@ -12,6 +12,9 @@
         android:theme="@style/Theme.BhajanSangraha"
         tools:targetApi="31">
         <activity
+            android:name=".Favourite_Bhajans.FavouriteBhajans"
+            android:exported="false" />
+        <activity
             android:name=".secondActivities.SecondActivity"
             android:exported="false" />
         <activity
