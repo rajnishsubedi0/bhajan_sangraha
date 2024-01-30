@@ -2,7 +2,9 @@ package com.rkant.bhajanapp.FirstActivities;
 
 import android.content.Context;
 import android.content.Intent;
+import android.view.ContextMenu;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -58,7 +60,7 @@ public class RecyclerAdapter extends androidx.recyclerview.widget.RecyclerView.A
         holder.textView.setText(string);
         holder.textViewNepaliNumber.setText(nepaliNumbers[holder.getAdapterPosition()]);
 
-        holder.linearLayout.setOnLongClickListener(new View.OnLongClickListener() {
+       /* holder.linearLayout.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
             dbHandler=new DB_Handler(context.getApplicationContext());
@@ -66,6 +68,21 @@ public class RecyclerAdapter extends androidx.recyclerview.widget.RecyclerView.A
                 Toast.makeText(context, "Data Added", Toast.LENGTH_SHORT).show();
 
                 return false;
+            }
+        });*/
+        holder.linearLayout.setOnCreateContextMenuListener(new View.OnCreateContextMenuListener() {
+            @Override
+            public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+                menu.add("delete").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+                    @Override
+                    public boolean onMenuItemClick(MenuItem item) {
+
+                        dbHandler=new DB_Handler(context.getApplicationContext());
+                        dbHandler.addData(""+holder.getAdapterPosition());
+                        Toast.makeText(context, "Data Added", Toast.LENGTH_SHORT).show();
+                        return true;
+                    }
+                });
             }
         });
         holder.linearLayout.setOnClickListener(new View.OnClickListener() {
