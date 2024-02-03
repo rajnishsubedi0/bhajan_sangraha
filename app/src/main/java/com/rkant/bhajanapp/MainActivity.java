@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Handler;
@@ -19,6 +20,7 @@ import android.widget.SearchView;
 import android.widget.Toast;
 
 import com.rkant.bhajanapp.Favourite_Bhajans.FavouriteBhajans;
+import com.rkant.bhajanapp.FirstActivities.DB_Handler;
 import com.rkant.bhajanapp.FirstActivities.RecyclerAdapter;
 import com.rkant.bhajanapp.secondActivities.DataHolder;
 
@@ -32,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
     RecyclerAdapter recyclerCustomAdapter;
     Boolean backPressed=false;
     ActionBar actionBar;
+    DB_Handler dbHandler;
 
     String[] nepaliNumbers={"१","२","३","४","५","६","७","८","९","१०","११","१२","१३","१४","१५","१६","१७","१८","१९","२०","२१","२२","२३","२४","२५","२६","२७","२८","२९","३०","३१","३२","३३","३४","३५","३६","३७","३८","३९","४०","४१","४२","४३","४४","४५","४६","४७","४८","४९","५०","५१","५२","५३","५४","५५","५६","५७","५८","५९","६०","६१","६२","६३","६४","६५","६६","६७","६८","६९","७०","७१","७२","७३","७४","७५","७६","७७","७८","७९","८०","८१","८२","८३","८४","८५","८६","८७","८८","८९","९०","९१"};
 ArrayList<DataHolder> arrayList;
@@ -41,15 +44,32 @@ AdapterView.OnItemSelectedListener listener;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        dbHandler=new DB_Handler(MainActivity.this);
         recyclerView=findViewById(R.id.recyclerView);
         arrayList=new ArrayList<>();
-        addingData();
+        initializeData();
         settingAdapter();
 
 
 
         // Changing Action Bar colour
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xff6200ed));
+    }
+
+    public void checkSharedPref() {
+        SharedPreferences sharedPreferences = getSharedPreferences("MySharedPref",MODE_PRIVATE);
+        String str=sharedPreferences.getString("name","");
+        if(sharedPreferences.getString("name","")=="") {
+            SharedPreferences.Editor myEdit = sharedPreferences.edit();
+            SharedPreferences sh = getSharedPreferences("MySharedPref",MODE_PRIVATE);
+            myEdit.putString("name", "true");
+            myEdit.commit();
+            for(int i = 0; i< bhajan_name_nepali.length; i++){
+                dbHandler.addData(bhajan_name_nepali[i]);
+            }
+            Toast.makeText(this, ""+str, Toast.LENGTH_SHORT).show();
+        }
+
     }
 
 
@@ -64,12 +84,20 @@ AdapterView.OnItemSelectedListener listener;
     }
 
 
-    private void addingData() {
+    public void initializeData() {
         bhajan_name_english=getResources().getStringArray(R.array.list_opening_bhajan_lists_english);
         bhajan_name_nepali =getResources().getStringArray(R.array.list_opening_bhajan_lists);
+        addData();
+        checkSharedPref();
+    }
+
+    public void addData() {
         for(int i = 0; i< bhajan_name_nepali.length; i++){
             arrayList.add(new DataHolder(bhajan_name_nepali[i],bhajan_name_english[i],i));
         }
+    }
+
+    public void stringToSqlite() {
 
     }
 

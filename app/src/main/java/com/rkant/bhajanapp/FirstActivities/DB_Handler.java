@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class DB_Handler extends SQLiteOpenHelper {
-    private static final String DB_NAME="favourite_bhajansDB";
+    private static final String DB_NAME="bhajan_list";
     private static final int DB_VERSION=1;
     private static final String DB_TABLE_NAME="bhajans_table";
     private static final String SERIAL_NO="serial_no";
@@ -37,4 +37,5 @@ public class DB_Handler extends SQLiteOpenHelper {
         db.close();
 
     }
+
 }
