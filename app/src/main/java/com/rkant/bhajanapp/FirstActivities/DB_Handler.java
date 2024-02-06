@@ -1,9 +1,18 @@
 package com.rkant.bhajanapp.FirstActivities;
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.Toast;
+
+import com.rkant.bhajanapp.MainActivity;
+
+import java.util.ArrayList;
+
 public class DB_Handler extends SQLiteOpenHelper {
+    Context context;
+    ArrayList<DataHolder> arrayList;
         private static final String DB_NAME="bhajan_list";
         private static final int DB_VERSION=1;
         private static final String DB_TABLE_NAME="bhajans_table";
@@ -11,6 +20,7 @@ public class DB_Handler extends SQLiteOpenHelper {
         private static final String BHAJAN_NAME="bhajan_name";
         public DB_Handler(Context context) {
             super(context, DB_NAME, null, DB_VERSION);
+            this.context=context;
         }
 
         @Override
@@ -28,11 +38,30 @@ public class DB_Handler extends SQLiteOpenHelper {
             onCreate(sqLiteDatabase);
         }
         public void addData(String str){
+            if(checkIfExists(str)){
             SQLiteDatabase db=this.getWritableDatabase();
             ContentValues contentValues=new ContentValues();
             contentValues.put(BHAJAN_NAME,str);
             db.insert(DB_TABLE_NAME,null,contentValues);
             db.close();
+            Toast.makeText(context, "Data Added", Toast.LENGTH_SHORT).show();
+            }
+
+
+        }
+        public boolean checkIfExists(String str) {
+            arrayList = new ArrayList<>();
+            SQLiteDatabase db = this.getReadableDatabase();
+            Cursor cursor = db.rawQuery("SELECT * FROM " + DB_TABLE_NAME, null);
+            // ArrayList<DataHolder> arrayList=new ArrayList<>();
+            while (cursor.moveToNext()) {
+                if (str.equals(cursor.getString(1))) {
+                    Toast.makeText(context, "Data already been added", Toast.LENGTH_SHORT).show();
+                    return false;
+                }
+
+            }
+            return true;
 
         }
 

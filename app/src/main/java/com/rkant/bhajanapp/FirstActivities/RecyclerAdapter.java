@@ -76,7 +76,6 @@ public class RecyclerAdapter extends androidx.recyclerview.widget.RecyclerView.A
                 public boolean onMenuItemClick(@NonNull MenuItem menuItem) {
                     dbHandler=new DB_Handler(context.getApplicationContext());
                     dbHandler.addData(""+holder.getAdapterPosition());
-                    Toast.makeText(context, "Data Added", Toast.LENGTH_SHORT).show();
                     return false;
                 }
             });

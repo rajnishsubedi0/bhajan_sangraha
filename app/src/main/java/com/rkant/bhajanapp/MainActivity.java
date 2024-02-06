@@ -6,6 +6,7 @@ import androidx.core.view.MenuItemCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Handler;
@@ -22,6 +23,7 @@ import com.rkant.bhajanapp.secondActivities.DataHolder;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
+    public static Context myContext;
         MenuItem menuItem;
     SearchView searchView;
     RecyclerView recyclerView;
