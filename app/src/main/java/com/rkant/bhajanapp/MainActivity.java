@@ -7,16 +7,20 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.SearchView;
 import android.widget.Toast;
 
+import com.rkant.bhajanapp.Favourites.FavouriteBookmarked;
 import com.rkant.bhajanapp.FirstActivities.RecyclerAdapter;
 import com.rkant.bhajanapp.secondActivities.DataHolder;
 
@@ -24,7 +28,8 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     public static Context myContext;
-        MenuItem menuItem;
+    Button button;
+    MenuItem menuItem;
     SearchView searchView;
     RecyclerView recyclerView;
     String[] bhajan_name_nepali,bhajan_name_english;
@@ -40,10 +45,13 @@ AdapterView.OnItemSelectedListener listener;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        button=findViewById(R.id.buttonn);
         recyclerView=findViewById(R.id.recyclerView);
         arrayList=new ArrayList<>();
+        onButtonClick();
         addingData();
         settingAdapter();
+
 
 
 
@@ -51,6 +59,16 @@ AdapterView.OnItemSelectedListener listener;
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xff6200ed));
     }
 
+    public void onButtonClick() {
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(MainActivity.this, FavouriteBookmarked.class);
+                startActivity(intent);
+                Toast.makeText(MainActivity.this, "Clicked", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
 
 
     private void settingAdapter() {
