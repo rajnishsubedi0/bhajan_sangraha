@@ -2,12 +2,15 @@ package com.rkant.bhajanapp.FirstActivities;
 
 import android.content.Context;
 import android.content.Intent;
+import android.view.ContextMenu;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
@@ -20,6 +23,7 @@ public class RecyclerAdapter extends androidx.recyclerview.widget.RecyclerView.A
     private ArrayList<DataHolder> arrayList;
     AdapterView.OnItemSelectedListener listener;
     Context context;
+    DB_Handler dbHandler;
     String[] nepaliNumbers;
     public RecyclerAdapter(ArrayList<DataHolder> arrayList, AdapterView.OnItemSelectedListener listener, Context context, String[] nepaliNumbers){
         this.arrayList=arrayList;
@@ -62,6 +66,21 @@ public class RecyclerAdapter extends androidx.recyclerview.widget.RecyclerView.A
            intent.putExtra("position",string);
            context.startActivity(intent);
                             }
+        });
+
+        holder.linearLayout.setOnCreateContextMenuListener(new View.OnCreateContextMenuListener() {
+            @Override
+            public void onCreateContextMenu(ContextMenu contextMenu, View view, ContextMenu.ContextMenuInfo contextMenuInfo) {
+            contextMenu.add("Add").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+                @Override
+                public boolean onMenuItemClick(@NonNull MenuItem menuItem) {
+                    dbHandler=new DB_Handler(context.getApplicationContext());
+                    dbHandler.addData(""+holder.getAdapterPosition());
+                    Toast.makeText(context, "Data Added", Toast.LENGTH_SHORT).show();
+                    return false;
+                }
+            });
+            }
         });
 
     }
