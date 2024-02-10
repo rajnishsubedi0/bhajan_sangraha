@@ -24,6 +24,14 @@ import com.rkant.bhajanapp.Favourites.FavouriteBookmarked;
 import com.rkant.bhajanapp.FirstActivities.RecyclerAdapter;
 import com.rkant.bhajanapp.secondActivities.DataHolder;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -48,11 +56,15 @@ AdapterView.OnItemSelectedListener listener;
         button=findViewById(R.id.buttonn);
         recyclerView=findViewById(R.id.recyclerView);
         arrayList=new ArrayList<>();
-        onButtonClick();
-        addingData();
         settingAdapter();
-
-
+        onButtonClick();
+        try {
+            addData2();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        } catch (JSONException e) {
+            throw new RuntimeException(e);
+        }
 
 
         // Changing Action Bar colour
@@ -80,14 +92,37 @@ AdapterView.OnItemSelectedListener listener;
 
     }
 
-
-    private void addingData() {
-        bhajan_name_english=getResources().getStringArray(R.array.list_opening_bhajan_lists_english);
-        bhajan_name_nepali =getResources().getStringArray(R.array.list_opening_bhajan_lists);
-        for(int i = 0; i< bhajan_name_nepali.length; i++){
-            arrayList.add(new DataHolder(bhajan_name_nepali[i],bhajan_name_english[i],i));
+    public void addData2() throws IOException, JSONException {
+        String jsonDataString=readDataFromFile();
+        JSONArray jsonArray=new JSONArray(jsonDataString);
+        for (int i=0;i<jsonArray.length();i++){
+            JSONObject jsonObject=jsonArray.getJSONObject(i);
+            String nepali_bhajan=jsonObject.getString("bhajan_nepali");
+            String bhajan_english_for_search=jsonObject.getString("bhajan_english");
+            arrayList.add( new DataHolder(nepali_bhajan,bhajan_english_for_search,i));
+            recyclerCustomAdapter.notifyDataSetChanged();
         }
 
+    }
+
+    public String readDataFromFile() throws IOException {
+        InputStream inputStream=null;
+        StringBuilder builder=new StringBuilder();
+        try{
+            String jsonString=null;
+            inputStream=getResources().openRawResource(R.raw.bhajan_list);
+            BufferedReader bufferedReader=new BufferedReader(
+                    new InputStreamReader(inputStream,"UTF-8"));
+            while ((jsonString=bufferedReader.readLine()) !=null){
+                builder.append(jsonString);
+            }
+        }
+        finally {
+            if(inputStream != null){
+                inputStream.close();
+            }
+        }
+        return new String(builder);
     }
 
     @Override
