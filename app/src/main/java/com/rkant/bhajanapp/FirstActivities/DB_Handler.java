@@ -6,6 +6,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.widget.Toast;
 
+import com.rkant.bhajanapp.Favourites.FavouriteBookmarked;
 import com.rkant.bhajanapp.MainActivity;
 
 import java.util.ArrayList;
@@ -64,6 +65,15 @@ public class DB_Handler extends SQLiteOpenHelper {
             return true;
 
         }
+        public void fetchDbData(){
+        SQLiteDatabase db=this.getReadableDatabase();
+        Cursor cursor=db.rawQuery("SELECT * FROM "+DB_TABLE_NAME,null);
+        // ArrayList<DataHolder> arrayList=new ArrayList<>();
+        while (cursor.moveToNext()){
+            FavouriteBookmarked.publicArrayList.add(new DataHolder(cursor.getString(1)));
+            FavouriteBookmarked.publicRecyclerAdapter.notifyDataSetChanged();
+        }
+    }
 
     }
 
