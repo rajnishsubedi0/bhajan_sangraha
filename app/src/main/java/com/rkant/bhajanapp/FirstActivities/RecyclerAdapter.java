@@ -56,7 +56,6 @@ public class RecyclerAdapter extends androidx.recyclerview.widget.RecyclerView.A
     @Override
     public void onBindViewHolder(@NonNull RecyclerAdapter.MyViewHolder holder, int position) {
         String string=arrayList.get(holder.getAdapterPosition()).getBhajan_name_nepali();
-        int number=arrayList.get(holder.getAdapterPosition()).getInteger();
         holder.textView.setText(string);
         holder.textViewNepaliNumber.setText(nepaliNumbers[holder.getAdapterPosition()]);
         holder.linearLayout.setOnClickListener(new View.OnClickListener() {

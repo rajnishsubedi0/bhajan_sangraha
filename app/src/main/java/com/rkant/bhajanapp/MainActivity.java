@@ -56,15 +56,16 @@ AdapterView.OnItemSelectedListener listener;
         button=findViewById(R.id.buttonn);
         recyclerView=findViewById(R.id.recyclerView);
         arrayList=new ArrayList<>();
-        settingAdapter();
-        onButtonClick();
         try {
-            addData2();
+            addData();
         } catch (IOException e) {
             throw new RuntimeException(e);
         } catch (JSONException e) {
             throw new RuntimeException(e);
         }
+
+        settingAdapter();
+        onButtonClick();
 
 
         // Changing Action Bar colour
@@ -92,15 +93,14 @@ AdapterView.OnItemSelectedListener listener;
 
     }
 
-    public void addData2() throws IOException, JSONException {
+    public void addData() throws IOException, JSONException {
         String jsonDataString=readDataFromFile();
         JSONArray jsonArray=new JSONArray(jsonDataString);
         for (int i=0;i<jsonArray.length();i++){
             JSONObject jsonObject=jsonArray.getJSONObject(i);
             String nepali_bhajan=jsonObject.getString("bhajan_nepali");
             String bhajan_english_for_search=jsonObject.getString("bhajan_english");
-            arrayList.add( new DataHolder(nepali_bhajan,bhajan_english_for_search,i));
-            recyclerCustomAdapter.notifyDataSetChanged();
+            arrayList.add( new DataHolder(nepali_bhajan,bhajan_english_for_search));
         }
 
     }
