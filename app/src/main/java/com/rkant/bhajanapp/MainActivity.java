@@ -100,7 +100,8 @@ AdapterView.OnItemSelectedListener listener;
             JSONObject jsonObject=jsonArray.getJSONObject(i);
             String nepali_bhajan=jsonObject.getString("bhajan_nepali");
             String bhajan_english_for_search=jsonObject.getString("bhajan_english");
-            arrayList.add( new DataHolder(nepali_bhajan,bhajan_english_for_search));
+            String id=jsonObject.getString("id");
+            arrayList.add( new DataHolder(nepali_bhajan,bhajan_english_for_search,id));
         }
 
     }
