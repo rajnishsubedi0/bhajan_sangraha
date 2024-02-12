@@ -6,7 +6,6 @@ import androidx.core.view.MenuItemCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -35,12 +34,10 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    public static Context myContext;
     Button button;
     MenuItem menuItem;
     SearchView searchView;
     RecyclerView recyclerView;
-    String[] bhajan_name_nepali,bhajan_name_english;
     RecyclerAdapter recyclerCustomAdapter;
     Boolean backPressed=false;
     ActionBar actionBar;

@@ -56,12 +56,12 @@ public class RecyclerAdapter extends androidx.recyclerview.widget.RecyclerView.A
     @Override
     public void onBindViewHolder(@NonNull RecyclerAdapter.MyViewHolder holder, int position) {
         String string=arrayList.get(holder.getAdapterPosition()).getBhajan_name_nepali();
+        String str= arrayList.get(holder.getAdapterPosition()).getId();
         holder.textView.setText(string);
         holder.textViewNepaliNumber.setText(nepaliNumbers[holder.getAdapterPosition()]);
         holder.linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String str= arrayList.get(holder.getAdapterPosition()).getId();
            Intent intent= new Intent(context, SecondActivity.class);
            intent.putExtra("position",str);
            context.startActivity(intent);
@@ -75,7 +75,7 @@ public class RecyclerAdapter extends androidx.recyclerview.widget.RecyclerView.A
                 @Override
                 public boolean onMenuItemClick(@NonNull MenuItem menuItem) {
                     dbHandler=new DB_Handler(context.getApplicationContext());
-                    dbHandler.addData(""+holder.getAdapterPosition());
+                    dbHandler.addData(str);
                     return false;
                 }
             });

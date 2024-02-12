@@ -53,7 +53,7 @@ public class FavouriteBookmarked extends AppCompatActivity {
         for (int i=0;i<jsonArray.length();i++){
             String ssttt=jsonArray.getString(i);
             publicArrayList.add( new DataHolder(ssttt));
-        }
+        } //holder.textView.setText(strings[holder.getAdapterPosition()]);
 
     }
 

@@ -23,7 +23,6 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
         this.arrayList=arrayList;
         this.context=context;
     }
-   // String [] strings={"halo","hola","inkiya","hihi","hihi"};
     public class MyViewHolderClass extends RecyclerView.ViewHolder {
         TextView textView;
         public MyViewHolderClass(@NonNull View itemView) {
@@ -40,7 +39,6 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerAdapter.MyViewHolderClass holder, int position) {
-       //holder.textView.setText(strings[holder.getAdapterPosition()]);
         holder.textView.setText(arrayList.get(holder.getAdapterPosition()).getString());
     }
 

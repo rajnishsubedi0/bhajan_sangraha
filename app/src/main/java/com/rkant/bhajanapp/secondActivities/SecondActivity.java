@@ -8,7 +8,6 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.WindowManager;
-import android.widget.Toast;
 
 import com.rkant.bhajanapp.FirstActivities.DataHolder;
 import com.rkant.bhajanapp.R;
