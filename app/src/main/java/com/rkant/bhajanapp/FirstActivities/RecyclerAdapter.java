@@ -61,8 +61,9 @@ public class RecyclerAdapter extends androidx.recyclerview.widget.RecyclerView.A
         holder.linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String str= String.valueOf(holder.getAdapterPosition());
            Intent intent= new Intent(context, SecondActivity.class);
-           intent.putExtra("position",string);
+           intent.putExtra("position",str);
            context.startActivity(intent);
                             }
         });
