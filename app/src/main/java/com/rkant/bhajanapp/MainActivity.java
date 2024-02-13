@@ -40,8 +40,8 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     RecyclerAdapter recyclerCustomAdapter;
     Boolean backPressed=false;
-    String[] nepaliNumbers={"१","२","३","४","५","६","७","८","९","१०","११","१२","१३","१४","१५","१६","१७","१८","१९","२०","२१","२२","२३","२४","२५","२६","२७","२८","२९","३०","३१","३२","३३","३४","३५","३६","३७","३८","३९","४०","४१","४२","४३","४४","४५","४६","४७","४८","४९","५०","५१","५२","५३","५४","५५","५६","५७","५८","५९","६०","६१","६२","६३","६४","६५","६६","६७","६८","६९","७०","७१","७२","७३","७४","७५","७६","७७","७८","७९","८०","८१","८२","८३","८४","८५","८६","८७","८८","८९","९०","९१"};
-ArrayList<DataHolder> arrayList;
+   ArrayList<DataHolder> arrayList;
+ArrayList<com.rkant.bhajanapp.FirstActivities.DataHolder> nepaliNumbers;
 AdapterView.OnItemSelectedListener listener;
 
     @Override
@@ -51,6 +51,7 @@ AdapterView.OnItemSelectedListener listener;
         button=findViewById(R.id.buttonn);
         recyclerView=findViewById(R.id.recyclerView);
         arrayList=new ArrayList<>();
+        nepaliNumbers=new ArrayList<>();
         try {
             addData();
         } catch (IOException e) {
@@ -89,7 +90,7 @@ AdapterView.OnItemSelectedListener listener;
     }
 
     public void addData() throws IOException, JSONException {
-        String jsonDataString=readDataFromFile();
+        String jsonDataString=readDataFromFile(R.raw.bhajan_list);
         JSONArray jsonArray=new JSONArray(jsonDataString);
         for (int i=0;i<jsonArray.length();i++){
             JSONObject jsonObject=jsonArray.getJSONObject(i);
@@ -98,15 +99,25 @@ AdapterView.OnItemSelectedListener listener;
             String id=jsonObject.getString("id");
             arrayList.add( new DataHolder(nepali_bhajan,bhajan_english_for_search,id));
         }
+        String jsonData=readDataFromFile(R.raw.nepali_numbers);
+        JSONArray array=new JSONArray(jsonData);
+        for (int j=0;j<array.length();j++){
+            String strr=array.getString(j);
+            nepaliNumbers.add(new com.rkant.bhajanapp.FirstActivities.DataHolder(strr));
+           // Toast.makeText(this, ""+strr, Toast.LENGTH_SHORT).show();
+
+        }
+
 
     }
 
-    public String readDataFromFile() throws IOException {
+    public String readDataFromFile(int i) throws IOException {
+
         InputStream inputStream=null;
         StringBuilder builder=new StringBuilder();
         try{
             String jsonString=null;
-            inputStream=getResources().openRawResource(R.raw.bhajan_list);
+            inputStream=getResources().openRawResource(i);
             BufferedReader bufferedReader=new BufferedReader(
                     new InputStreamReader(inputStream,"UTF-8"));
             while ((jsonString=bufferedReader.readLine()) !=null){

@@ -24,8 +24,9 @@ public class RecyclerAdapter extends androidx.recyclerview.widget.RecyclerView.A
     AdapterView.OnItemSelectedListener listener;
     Context context;
     DB_Handler dbHandler;
-    String[] nepaliNumbers;
-    public RecyclerAdapter(ArrayList<DataHolder> arrayList, AdapterView.OnItemSelectedListener listener, Context context, String[] nepaliNumbers){
+    ArrayList<com.rkant.bhajanapp.FirstActivities.DataHolder> nepaliNumbers;
+    public RecyclerAdapter(ArrayList<DataHolder> arrayList, AdapterView.OnItemSelectedListener listener, Context context,
+                           ArrayList<com.rkant.bhajanapp.FirstActivities.DataHolder> nepaliNumbers){
         this.arrayList=arrayList;
         this.listener=listener;
         this.context=context;
@@ -58,7 +59,7 @@ public class RecyclerAdapter extends androidx.recyclerview.widget.RecyclerView.A
         String string=arrayList.get(holder.getAdapterPosition()).getBhajan_name_nepali();
         String str= arrayList.get(holder.getAdapterPosition()).getId();
         holder.textView.setText(string);
-        holder.textViewNepaliNumber.setText(nepaliNumbers[holder.getAdapterPosition()]);
+        holder.textViewNepaliNumber.setText(nepaliNumbers.get(holder.getAdapterPosition()).getString());
         holder.linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
