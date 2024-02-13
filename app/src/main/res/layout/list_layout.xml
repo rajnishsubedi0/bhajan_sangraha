@@ -17,7 +17,7 @@
             android:id="@+id/layout_name"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#1F1F1F"
+            android:background="@color/recycler_black"
             android:orientation="horizontal"
             android:paddingTop="9dp"
             android:paddingBottom="10dp">
