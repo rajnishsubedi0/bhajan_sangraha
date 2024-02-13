@@ -28,22 +28,22 @@ public class FavouriteBookmarked extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_favourite_bookmarked);
-        recyclerView=findViewById(R.id.recyclerViewFromFavouriteBookmarked);
+        setContentView(R.layout.activity_main);
+        recyclerView=findViewById(R.id.recyclerView);
         publicArrayList=new ArrayList<>();
-        try {
+        /*try {
             addData2();
         } catch (IOException e) {
             throw new RuntimeException(e);
         } catch (JSONException e) {
             throw new RuntimeException(e);
-        }
+        }*/
         publicRecyclerAdapter=new RecyclerAdapter(FavouriteBookmarked.this,publicArrayList);
         RecyclerView.LayoutManager layoutManager= new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(publicRecyclerAdapter);
-       // DB_Handler dbHandler=new DB_Handler(getApplicationContext());
-       // dbHandler.fetchDbData();
+        DB_Handler dbHandler=new DB_Handler(getApplicationContext());
+        dbHandler.fetchDbData();
     }
     public void addData2() throws IOException, JSONException {
         String jsonObjectString=readDataFromFile();

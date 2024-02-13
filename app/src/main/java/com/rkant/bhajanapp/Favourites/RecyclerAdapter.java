@@ -27,13 +27,13 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
         TextView textView;
         public MyViewHolderClass(@NonNull View itemView) {
             super(itemView);
-            textView=itemView.findViewById(R.id.textViewFromFavouriteRecyclerLayout);
+            textView=itemView.findViewById(R.id.textView);
         }
     }
     @NonNull
     @Override
     public RecyclerAdapter.MyViewHolderClass onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view=LayoutInflater.from(parent.getContext()).inflate(R.layout.favourite_bookmarked_layout,parent,false);
+        View view=LayoutInflater.from(parent.getContext()).inflate(R.layout.list_layout,parent,false);
         return new MyViewHolderClass(view);
     }
 
