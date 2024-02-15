@@ -71,7 +71,7 @@ public class DB_Handler extends SQLiteOpenHelper {
         // ArrayList<DataHolder> arrayList=new ArrayList<>();
         while (cursor.moveToNext()){
             FavouriteBookmarked.publicArrayList.add(new DataHolder(cursor.getString(1)));
-            FavouriteBookmarked.publicRecyclerAdapter.notifyDataSetChanged();
+           // FavouriteBookmarked.publicRecyclerAdapter.notifyDataSetChanged();
         }
     }
 

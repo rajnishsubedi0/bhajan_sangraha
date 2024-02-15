@@ -23,7 +23,7 @@ import java.util.ArrayList;
 
 public class FavouriteBookmarked extends AppCompatActivity {
     RecyclerView recyclerView;
-    public static ArrayList<DataHolder> publicArrayList;
+    public static ArrayList<DataHolder> publicArrayList, notPublicArrayList;
     public static RecyclerAdapter publicRecyclerAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,39 +31,46 @@ public class FavouriteBookmarked extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         recyclerView=findViewById(R.id.recyclerView);
         publicArrayList=new ArrayList<>();
-        /*try {
-            addData2();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        } catch (JSONException e) {
-            throw new RuntimeException(e);
-        }*/
-        publicRecyclerAdapter=new RecyclerAdapter(FavouriteBookmarked.this,publicArrayList);
+        notPublicArrayList=new ArrayList<>();
+      
+        publicRecyclerAdapter=new RecyclerAdapter(FavouriteBookmarked.this,notPublicArrayList);
         RecyclerView.LayoutManager layoutManager= new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(publicRecyclerAdapter);
         DB_Handler dbHandler=new DB_Handler(getApplicationContext());
         dbHandler.fetchDbData();
+        try {
+            addData2();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        } catch (JSONException e) {
+            throw new RuntimeException(e);
+        }
     }
+
+
     public void addData2() throws IOException, JSONException {
-        String jsonObjectString=readDataFromFile();
-       // String jsonDataString=readDataFromFile();
-        JSONObject jsonObjeecct= new JSONObject(jsonObjectString);
-        JSONArray jsonArray=jsonObjeecct.getJSONArray("bhajan");
-        for (int i=0;i<jsonArray.length();i++){
-            String ssttt=jsonArray.getString(i);
-            publicArrayList.add( new DataHolder(ssttt));
-        } //holder.textView.setText(strings[holder.getAdapterPosition()]);
-
+        String jsonArrayString=readDataFromFile(R.raw.bhajan_list);
+        JSONArray jsonArray=new JSONArray(jsonArrayString);
+        for(int i=0;i<jsonArray.length(); i++){
+            JSONObject jsonObject=jsonArray.getJSONObject(i);
+            String str=jsonObject.getString("id");
+            for (int j=0;j<publicArrayList.size();j++){
+                if (str.equals(publicArrayList.get(j).getString())){
+                    notPublicArrayList.add(new DataHolder(jsonObject.getString("bhajan_nepali")));
+                    publicRecyclerAdapter.notifyDataSetChanged();
+                }
+            }
+        }
     }
 
 
-    public String readDataFromFile() throws IOException {
+    public String readDataFromFile(int i) throws IOException {
         InputStream inputStream=null;
         StringBuilder builder=new StringBuilder();
         try{
             String jsonString=null;
-            inputStream=getResources().openRawResource(R.raw.bhajan_test);
+            inputStream=getResources().openRawResource(i);
             BufferedReader bufferedReader=new BufferedReader(
                     new InputStreamReader(inputStream,"UTF-8"));
             while ((jsonString=bufferedReader.readLine()) !=null){
