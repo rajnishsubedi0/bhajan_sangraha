@@ -1,9 +1,11 @@
 package com.rkant.bhajanapp.Favourites;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -12,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.rkant.bhajanapp.R;
 import com.rkant.bhajanapp.secondActivities.DataHolder;
+import com.rkant.bhajanapp.secondActivities.SecondActivity;
 
 import java.util.ArrayList;
 
@@ -28,10 +31,12 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
     }
     public class MyViewHolderClass extends RecyclerView.ViewHolder {
         TextView textView,textViewNepaliNumber;
+        LinearLayout linearLayout;
         public MyViewHolderClass(@NonNull View itemView) {
             super(itemView);
             textView=itemView.findViewById(R.id.textView);
             textViewNepaliNumber=itemView.findViewById(R.id.textViewNepaliNumber);
+            linearLayout=itemView.findViewById(R.id.layout_name);
         }
     }
     @NonNull
@@ -45,6 +50,14 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
     public void onBindViewHolder(@NonNull RecyclerAdapter.MyViewHolderClass holder, int position) {
         holder.textView.setText(arrayList.get(holder.getAdapterPosition()).getBhajan_name_nepali());
         holder.textViewNepaliNumber.setText(arrayList1.get(holder.getAdapterPosition()).getString());
+        holder.linearLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(context, SecondActivity.class);
+                intent.putExtra("position",arrayList.get(holder.getAdapterPosition()).getId());
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
