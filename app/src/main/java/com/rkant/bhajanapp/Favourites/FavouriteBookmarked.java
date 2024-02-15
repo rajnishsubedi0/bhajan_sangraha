@@ -23,7 +23,8 @@ import java.util.ArrayList;
 
 public class FavouriteBookmarked extends AppCompatActivity {
     RecyclerView recyclerView;
-    public static ArrayList<DataHolder> publicArrayList, notPublicArrayList;
+    public static ArrayList<DataHolder> publicArrayList,nepaliNumberArrayList;
+    ArrayList<com.rkant.bhajanapp.secondActivities.DataHolder> notPublicArrayList;
     public static RecyclerAdapter publicRecyclerAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,8 +33,9 @@ public class FavouriteBookmarked extends AppCompatActivity {
         recyclerView=findViewById(R.id.recyclerView);
         publicArrayList=new ArrayList<>();
         notPublicArrayList=new ArrayList<>();
-      
-        publicRecyclerAdapter=new RecyclerAdapter(FavouriteBookmarked.this,notPublicArrayList);
+        nepaliNumberArrayList=new ArrayList<>();
+
+        publicRecyclerAdapter=new RecyclerAdapter(FavouriteBookmarked.this,notPublicArrayList,nepaliNumberArrayList);
         RecyclerView.LayoutManager layoutManager= new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(publicRecyclerAdapter);
@@ -57,10 +59,19 @@ public class FavouriteBookmarked extends AppCompatActivity {
             String str=jsonObject.getString("id");
             for (int j=0;j<publicArrayList.size();j++){
                 if (str.equals(publicArrayList.get(j).getString())){
-                    notPublicArrayList.add(new DataHolder(jsonObject.getString("bhajan_nepali")));
+                    notPublicArrayList.add(new com.rkant.bhajanapp.secondActivities.DataHolder(
+                            jsonObject.getString("bhajan_nepali"),
+                            jsonObject.getString("bhajan_english"),
+                            jsonObject.getString("id")   ));
                     publicRecyclerAdapter.notifyDataSetChanged();
                 }
             }
+        }
+        String nepaliJsonArrayString=readDataFromFile(R.raw.nepali_numbers);
+        JSONArray jsonArray1=new JSONArray(nepaliJsonArrayString);
+        for (int i=0;i<jsonArray1.length();i++){
+         nepaliNumberArrayList.add(new DataHolder(jsonArray1.getString(i)));
+         publicRecyclerAdapter.notifyDataSetChanged();
         }
     }
 
