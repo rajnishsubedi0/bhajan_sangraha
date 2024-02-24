@@ -72,7 +72,7 @@ public class RecyclerAdapter extends androidx.recyclerview.widget.RecyclerView.A
         holder.linearLayout.setOnCreateContextMenuListener(new View.OnCreateContextMenuListener() {
             @Override
             public void onCreateContextMenu(ContextMenu contextMenu, View view, ContextMenu.ContextMenuInfo contextMenuInfo) {
-            contextMenu.add("Add").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            contextMenu.add("Add to favourite").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
                 @Override
                 public boolean onMenuItemClick(@NonNull MenuItem menuItem) {
                     dbHandler=new DB_Handler(context.getApplicationContext());

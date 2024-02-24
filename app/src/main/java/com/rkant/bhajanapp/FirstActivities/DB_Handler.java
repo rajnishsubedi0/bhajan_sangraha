@@ -74,6 +74,15 @@ public class DB_Handler extends SQLiteOpenHelper {
            // FavouriteBookmarked.publicRecyclerAdapter.notifyDataSetChanged();
         }
     }
+    public void deleteCourse(String courseName) {
+
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        // on below line we are calling a method to delete our
+        // course and we are comparing it with our course name.
+        db.delete(DB_TABLE_NAME, "bhajan_name=?", new String[]{courseName});
+        db.close();
+    }
 
     }
 
