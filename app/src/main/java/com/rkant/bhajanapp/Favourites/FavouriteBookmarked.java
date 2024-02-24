@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.widget.Toast;
@@ -35,6 +36,9 @@ public class FavouriteBookmarked extends AppCompatActivity {
         publicArrayList=new ArrayList<>();
         notPublicArrayList=new ArrayList<>();
         nepaliNumberArrayList=new ArrayList<>();
+
+
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xff6200ed));
 
         publicRecyclerAdapter=new RecyclerAdapter(FavouriteBookmarked.this,notPublicArrayList,nepaliNumberArrayList);
         RecyclerView.LayoutManager layoutManager= new LinearLayoutManager(getApplicationContext());

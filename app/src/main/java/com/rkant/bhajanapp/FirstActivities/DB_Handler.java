@@ -45,7 +45,7 @@ public class DB_Handler extends SQLiteOpenHelper {
             contentValues.put(BHAJAN_NAME,str);
             db.insert(DB_TABLE_NAME,null,contentValues);
             db.close();
-            Toast.makeText(context, "Data Added", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "Bhajan Added", Toast.LENGTH_SHORT).show();
             }
 
 
@@ -57,7 +57,7 @@ public class DB_Handler extends SQLiteOpenHelper {
             // ArrayList<DataHolder> arrayList=new ArrayList<>();
             while (cursor.moveToNext()) {
                 if (str.equals(cursor.getString(1))) {
-                    Toast.makeText(context, "Data already been added", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, "Bhajan already been added", Toast.LENGTH_SHORT).show();
                     return false;
                 }
 

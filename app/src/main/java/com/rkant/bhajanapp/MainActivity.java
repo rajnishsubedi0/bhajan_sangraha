@@ -74,7 +74,6 @@ AdapterView.OnItemSelectedListener listener;
             public void onClick(View view) {
                 Intent intent=new Intent(MainActivity.this, FavouriteBookmarked.class);
                 startActivity(intent);
-                Toast.makeText(MainActivity.this, "Clicked", Toast.LENGTH_SHORT).show();
             }
         });
     }
