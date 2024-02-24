@@ -83,6 +83,7 @@ public class DB_Handler extends SQLiteOpenHelper {
         FavouriteBookmarked.nepaliNumberArrayList.clear();
         FavouriteBookmarked.notPublicArrayList.clear();
         fetchDbData();
+        Toast.makeText(context, "Removed", Toast.LENGTH_SHORT).show();
         db.close();
     }
 

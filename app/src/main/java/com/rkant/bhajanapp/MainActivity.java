@@ -1,5 +1,6 @@
 package com.rkant.bhajanapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.MenuItemCompat;
@@ -34,8 +35,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    Button button;
-    MenuItem menuItem;
+    MenuItem menuItem,favourite_bhajan_menuItem;
     SearchView searchView;
     RecyclerView recyclerView;
     RecyclerAdapter recyclerCustomAdapter;
@@ -48,7 +48,7 @@ AdapterView.OnItemSelectedListener listener;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        button=findViewById(R.id.buttonn);
+
         recyclerView=findViewById(R.id.recyclerView);
         arrayList=new ArrayList<>();
         nepaliNumbers=new ArrayList<>();
@@ -61,22 +61,14 @@ AdapterView.OnItemSelectedListener listener;
         }
 
         settingAdapter();
-        onButtonClick();
+
 
 
         // Changing Action Bar colour
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xff6200ed));
     }
 
-    public void onButtonClick() {
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(MainActivity.this, FavouriteBookmarked.class);
-                startActivity(intent);
-            }
-        });
-    }
+
 
 
     private void settingAdapter() {
@@ -136,7 +128,16 @@ AdapterView.OnItemSelectedListener listener;
         MenuInflater menuInflater=getMenuInflater();
         menuInflater.inflate(R.menu.menu_search,menu);
         menuItem =menu.findItem(R.id.search_bar);
+        favourite_bhajan_menuItem=menu.findItem(R.id.favourite_bhajan);
         searchView= (SearchView) MenuItemCompat.getActionView(menuItem);
+        favourite_bhajan_menuItem.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(@NonNull MenuItem menuItem) {
+                Intent intent=new Intent(MainActivity.this, FavouriteBookmarked.class);
+                startActivity(intent);
+                return false;
+            }
+        });
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
 
             @Override
