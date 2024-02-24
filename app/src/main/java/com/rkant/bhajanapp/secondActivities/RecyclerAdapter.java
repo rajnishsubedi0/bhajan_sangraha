@@ -16,13 +16,7 @@ import java.util.ArrayList;
 
 public class RecyclerAdapter extends androidx.recyclerview.widget.RecyclerView.Adapter<RecyclerAdapter.MyViewHolder>{
     private ArrayList<DataHolder> arrayList;
-    // initilizing linearlayout to set onTouchListener
     private LinearLayout linearLayout;
-
-
-
-    //passiing context to make toast for testing
-
     private Context context;
 
     public RecyclerAdapter(ArrayList<DataHolder> arrayList, Context context){

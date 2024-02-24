@@ -2,12 +2,15 @@ package com.rkant.bhajanapp.FirstActivities;
 
 import android.content.Context;
 import android.content.Intent;
+import android.view.ContextMenu;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
@@ -20,8 +23,10 @@ public class RecyclerAdapter extends androidx.recyclerview.widget.RecyclerView.A
     private ArrayList<DataHolder> arrayList;
     AdapterView.OnItemSelectedListener listener;
     Context context;
-    String[] nepaliNumbers;
-    public RecyclerAdapter(ArrayList<DataHolder> arrayList, AdapterView.OnItemSelectedListener listener, Context context, String[] nepaliNumbers){
+    DB_Handler dbHandler;
+    ArrayList<com.rkant.bhajanapp.FirstActivities.DataHolder> nepaliNumbers;
+    public RecyclerAdapter(ArrayList<DataHolder> arrayList, AdapterView.OnItemSelectedListener listener, Context context,
+                           ArrayList<com.rkant.bhajanapp.FirstActivities.DataHolder> nepaliNumbers){
         this.arrayList=arrayList;
         this.listener=listener;
         this.context=context;
@@ -52,16 +57,30 @@ public class RecyclerAdapter extends androidx.recyclerview.widget.RecyclerView.A
     @Override
     public void onBindViewHolder(@NonNull RecyclerAdapter.MyViewHolder holder, int position) {
         String string=arrayList.get(holder.getAdapterPosition()).getBhajan_name_nepali();
-        int number=arrayList.get(holder.getAdapterPosition()).getInteger();
+        String str= arrayList.get(holder.getAdapterPosition()).getId();
         holder.textView.setText(string);
-        holder.textViewNepaliNumber.setText(nepaliNumbers[holder.getAdapterPosition()]);
+        holder.textViewNepaliNumber.setText(nepaliNumbers.get(holder.getAdapterPosition()).getString());
         holder.linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
            Intent intent= new Intent(context, SecondActivity.class);
-           intent.putExtra("position",string);
+           intent.putExtra("position",str);
            context.startActivity(intent);
                             }
+        });
+
+        holder.linearLayout.setOnCreateContextMenuListener(new View.OnCreateContextMenuListener() {
+            @Override
+            public void onCreateContextMenu(ContextMenu contextMenu, View view, ContextMenu.ContextMenuInfo contextMenuInfo) {
+            contextMenu.add("Add to favourite").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+                @Override
+                public boolean onMenuItemClick(@NonNull MenuItem menuItem) {
+                    dbHandler=new DB_Handler(context.getApplicationContext());
+                    dbHandler.addData(str);
+                    return false;
+                }
+            });
+            }
         });
 
     }

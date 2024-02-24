@@ -10,4 +10,5 @@
     <color name="blue_for_text">#FFB0CEFC</color>
     <color name="white_color_for_background">#FFEFF0F3</color>
     <color name="purple_for_background">#603DB1</color>
+    <color name="recycler_black">#1F1F1F</color>
 </resources>
