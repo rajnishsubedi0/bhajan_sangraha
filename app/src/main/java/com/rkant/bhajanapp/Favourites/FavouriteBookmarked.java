@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.widget.Toast;
 
 import com.rkant.bhajanapp.FirstActivities.DB_Handler;
 import com.rkant.bhajanapp.FirstActivities.DataHolder;
@@ -24,7 +25,7 @@ import java.util.ArrayList;
 public class FavouriteBookmarked extends AppCompatActivity {
     RecyclerView recyclerView;
     public static ArrayList<DataHolder> publicArrayList,nepaliNumberArrayList;
-    ArrayList<com.rkant.bhajanapp.secondActivities.DataHolder> notPublicArrayList;
+    public static ArrayList<com.rkant.bhajanapp.secondActivities.DataHolder> notPublicArrayList;
     public static RecyclerAdapter publicRecyclerAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -94,5 +95,8 @@ public class FavouriteBookmarked extends AppCompatActivity {
             }
         }
         return new String(builder);
+    }
+    public void hi(){
+        Toast.makeText(this, "Hi", Toast.LENGTH_SHORT).show();
     }
 }

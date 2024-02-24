@@ -19,6 +19,9 @@ import com.rkant.bhajanapp.R;
 import com.rkant.bhajanapp.secondActivities.DataHolder;
 import com.rkant.bhajanapp.secondActivities.SecondActivity;
 
+import org.json.JSONException;
+
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyViewHolderClass> {
@@ -70,11 +73,20 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
                     public boolean onMenuItemClick(@NonNull MenuItem menuItem) {
                         dbHandler=new DB_Handler(context.getApplicationContext());
                         dbHandler.deleteCourse(arrayList.get(holder.getAdapterPosition()).getId());
+                        try {
+                            ((FavouriteBookmarked)context).addData2();
+                        } catch (IOException e) {
+                            throw new RuntimeException(e);
+                        } catch (JSONException e) {
+                            throw new RuntimeException(e);
+                        }
                         return false;
                     }
                 });
             }
         });
+
+
     }
 
     @Override
