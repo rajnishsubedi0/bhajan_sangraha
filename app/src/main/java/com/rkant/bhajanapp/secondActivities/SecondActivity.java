@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.Menu;
@@ -33,6 +35,7 @@ public class SecondActivity extends AppCompatActivity {
     ArrayList<DataHolder> arrayList;
     RecyclerView recyclerView;
     RecyclerAdapter bhajanData_recyclerView;
+    String youtube_url;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,7 +61,7 @@ public class SecondActivity extends AppCompatActivity {
     public void setData() throws IOException, JSONException {
         Bundle bundle=getIntent().getExtras();
         String intentPosition=bundle.getString("position");
-        String jsonDataString=readDataFromFile();
+        String jsonDataString=readDataFromFile(R.raw.bhajan_data);
         JSONArray jsonArray=new JSONArray(jsonDataString);
         for (int i=0;i<jsonArray.length();i++){
             JSONObject object=jsonArray.getJSONObject(i);
@@ -72,16 +75,27 @@ public class SecondActivity extends AppCompatActivity {
             }
         }
         setAdapter();
+        String string_url_link=readDataFromFile(R.raw.youtube_link);
+        JSONArray url_array=new JSONArray(string_url_link);
+        youtube_url="";
+        for (int j=0;j<url_array.length();j++){
+            JSONObject object=url_array.getJSONObject(j);
+            if(intentPosition.equals(object.getString("id"))){
+                youtube_url=object.getString("link");
+                break;
+            }
+        }
+
     }
 
 
 
-    public String readDataFromFile() throws IOException {
+    public String readDataFromFile(int i) throws IOException {
         InputStream inputStream=null;
         StringBuilder builder=new StringBuilder();
         try{
             String jsonString=null;
-            inputStream=getResources().openRawResource(R.raw.bhajan_data);
+            inputStream=getResources().openRawResource(i);
             BufferedReader bufferedReader=new BufferedReader(
                     new InputStreamReader(inputStream,"UTF-8"));
             while ((jsonString=bufferedReader.readLine()) !=null){
@@ -125,7 +139,20 @@ public class SecondActivity extends AppCompatActivity {
         youtube_url_menu.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(@NonNull MenuItem menuItem) {
-                Toast.makeText(SecondActivity.this, "Hi from youtube url", Toast.LENGTH_SHORT).show();
+               try {
+                   if(youtube_url!=""){
+                       Uri uri=Uri.parse(youtube_url);
+                       Intent intent=new Intent(Intent.ACTION_VIEW,uri);
+                       startActivity(intent);
+                   }
+                else {
+                       Toast.makeText(SecondActivity.this, "No link found", Toast.LENGTH_SHORT).show();
+                   }
+               }catch (Exception e) {
+                   Toast.makeText(SecondActivity.this, "No link found", Toast.LENGTH_SHORT).show();
+
+
+               }
                 return false;
             }
         });
