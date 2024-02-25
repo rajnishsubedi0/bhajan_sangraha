@@ -19,8 +19,12 @@ import com.rkant.bhajanapp.secondActivities.SecondActivity;
 import com.rkant.bhajanapp.secondActivities.DataHolder;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+
 public class RecyclerAdapter extends androidx.recyclerview.widget.RecyclerView.Adapter<RecyclerAdapter.MyViewHolder>{
     private ArrayList<DataHolder> arrayList;
+    //For debugging position i am using hashmap
+    HashMap<String,Integer> hashMap;
     AdapterView.OnItemSelectedListener listener;
     Context context;
     DB_Handler dbHandler;
@@ -31,6 +35,11 @@ public class RecyclerAdapter extends androidx.recyclerview.widget.RecyclerView.A
         this.listener=listener;
         this.context=context;
         this.nepaliNumbers=nepaliNumbers;
+        //For debugging purpose to know id position
+        hashMap=new HashMap<>();
+        for (int i=0;i<arrayList.size();i++){
+            hashMap.put(arrayList.get(i).getId(),i);
+        }
     }
 
 
@@ -65,6 +74,8 @@ public class RecyclerAdapter extends androidx.recyclerview.widget.RecyclerView.A
             public void onClick(View view) {
            Intent intent= new Intent(context, SecondActivity.class);
            intent.putExtra("position",str);
+           //For debugging position
+                Toast.makeText(context, "Position is: " +hashMap.get(str)+", Id is :"+str, Toast.LENGTH_SHORT).show();
            context.startActivity(intent);
                             }
         });
