@@ -1,5 +1,6 @@
 package com.rkant.bhajanapp.secondActivities;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -7,8 +8,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.WindowManager;
+import android.widget.Toast;
 
+import com.rkant.bhajanapp.Favourites.FavouriteBookmarked;
 import com.rkant.bhajanapp.FirstActivities.DataHolder;
 import com.rkant.bhajanapp.R;
 
@@ -23,6 +29,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 public class SecondActivity extends AppCompatActivity {
+    MenuItem youtube_url_menu;
     ArrayList<DataHolder> arrayList;
     RecyclerView recyclerView;
     RecyclerAdapter bhajanData_recyclerView;
@@ -110,4 +117,18 @@ public class SecondActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(bhajanData_recyclerView);
     }
-}
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater menuInflater=getMenuInflater();
+        menuInflater.inflate(R.menu.youtube_link,menu);
+        youtube_url_menu=menu.findItem(R.id.youtube_url);
+        youtube_url_menu.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(@NonNull MenuItem menuItem) {
+                Toast.makeText(SecondActivity.this, "Hi from youtube url", Toast.LENGTH_SHORT).show();
+                return false;
+            }
+        });
+        return super.onCreateOptionsMenu(menu);
+    }}
+
