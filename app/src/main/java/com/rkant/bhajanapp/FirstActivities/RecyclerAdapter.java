@@ -75,7 +75,7 @@ public class RecyclerAdapter extends androidx.recyclerview.widget.RecyclerView.A
            Intent intent= new Intent(context, SecondActivity.class);
            intent.putExtra("position",str);
            //For debugging position
-                Toast.makeText(context, "Position is: " +hashMap.get(str)+", Id is :"+str, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(context, "Position is: " +hashMap.get(str)+", Id is :"+str, Toast.LENGTH_SHORT).show();
            context.startActivity(intent);
                             }
         });
