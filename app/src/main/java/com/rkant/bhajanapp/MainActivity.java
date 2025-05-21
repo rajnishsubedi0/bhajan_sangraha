@@ -1,32 +1,48 @@
 package com.rkant.bhajanapp;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.core.view.MenuItemCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+
+import android.Manifest;
+import android.app.DownloadManager;
 import android.content.Intent;
-import android.graphics.drawable.ColorDrawable;
+import android.content.pm.PackageManager;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
+import android.provider.Settings;
+import android.widget.Toast;
+
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import android.graphics.drawable.ColorDrawable;
 import android.os.Handler;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.SearchView;
-import android.widget.Toast;
 
 import com.rkant.bhajanapp.Favourites.FavouriteBookmarked;
 import com.rkant.bhajanapp.FirstActivities.RecyclerAdapter;
 import com.rkant.bhajanapp.secondActivities.DataHolder;
 
 import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -35,6 +51,10 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
+    String url_version_code,url_app_link;
+    int versionCodeOfApp;
+    RequestQueue requestQueue;
+    JsonObjectRequest jsonObject;
     MenuItem menuItem,favourite_bhajan_menuItem;
     SearchView searchView;
     RecyclerView recyclerView;
@@ -48,7 +68,13 @@ AdapterView.OnItemSelectedListener listener;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        url_version_code ="https://check-version-number-axvy.shuttle.app/route/version/1";
+        url_app_link="https://check-version-number-axvy.shuttle.app/route/1";
+        try {
+            versionCodeOfApp = this.getPackageManager().getPackageInfo(this.getPackageName(), PackageManager.GET_ACTIVITIES).versionCode;
+        } catch (PackageManager.NameNotFoundException e) {
+            throw new RuntimeException(e);
+        }
         recyclerView=findViewById(R.id.recyclerView);
         arrayList=new ArrayList<>();
         nepaliNumbers=new ArrayList<>();
@@ -59,7 +85,9 @@ AdapterView.OnItemSelectedListener listener;
         } catch (JSONException e) {
             throw new RuntimeException(e);
         }
-
+        if(checkStoragePermission()){
+            usingVolley();
+        }
         settingAdapter();
 
 
@@ -68,7 +96,83 @@ AdapterView.OnItemSelectedListener listener;
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xff6200ed));
     }
 
+    public void downloadFile(){
+        DownloadManager downloadManager= (DownloadManager) this.getSystemService(DOWNLOAD_SERVICE);
 
+        Uri uri=Uri.parse(url_app_link);
+        DownloadManager.Request request=new DownloadManager.Request(uri);
+        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+        request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, "app-release.apk");
+        request.setTitle("app-release.apk");
+        request.setDescription("Downloading file...");
+        downloadManager.enqueue(request);
+
+    }
+
+    public void usingVolley(){
+        requestQueue= Volley.newRequestQueue(getApplicationContext());
+        jsonObject=new JsonObjectRequest(Request.Method.GET, url_version_code, null, new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject json) {
+
+
+                try {
+                    int i =json.getInt("version_number_id");
+
+                    if(i !=22 && i>versionCodeOfApp){
+                        downloadFile();
+                    }else{
+                    }
+
+                } catch (JSONException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(MainActivity.this, "Failed fetching data", Toast.LENGTH_SHORT).show();
+            }
+        });
+        requestQueue.add(jsonObject);
+    }
+
+    private boolean checkStoragePermission() {
+        // For Android 6.0 and above, we need to request runtime permission
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            // Android 11 (API 30) and above
+            if (Environment.isExternalStorageManager()) {
+                // Permission already granted
+                return true;
+
+            } else {
+                // Request the permission
+                Intent intent = new Intent(Settings.ACTION_MANAGE_ALL_FILES_ACCESS_PERMISSION);
+                startActivityForResult(intent, 100);
+
+            }
+        } else {
+            // For Android 10 and below
+            if (ContextCompat.checkSelfPermission(this,
+                    Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED &&
+                    ContextCompat.checkSelfPermission(this,
+                            Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
+                // Permissions already granted
+                return true;
+//
+            } else {
+                // Request permissions
+                ActivityCompat.requestPermissions(this,
+                        new String[]{
+                                Manifest.permission.READ_EXTERNAL_STORAGE,
+                                Manifest.permission.WRITE_EXTERNAL_STORAGE
+                        },
+                        100);
+            }
+        }
+        return false;
+    }
 
 
     private void settingAdapter() {
@@ -189,8 +293,31 @@ AdapterView.OnItemSelectedListener listener;
         }, 2500);
 
     }
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == 100) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                // Permission granted
+//                if_permission_granted_for_app_install=true;
+                Toast.makeText(this, "Permission Granted", Toast.LENGTH_SHORT).show();
+
+                if(checkStoragePermission()){
+                    usingVolley();
+
+                }
+            } else {
+                Toast.makeText(this, "Permission Denided, Please grand permission to enable auto update feature", Toast.LENGTH_SHORT).show();
+                // Permission denied
+                // You might want to show a message why this permission is needed
+                // or disable functionality that requires this permission
+            }
+        }
 
     }
+
+}
 
 
 
