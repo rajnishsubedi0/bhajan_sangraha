@@ -52,9 +52,8 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     String url_version_code,url_app_link;
-    int versionCodeOfApp;
-    RequestQueue requestQueue;
-    JsonObjectRequest jsonObject;
+    public static int versionCodeOfApp;
+    AppUpdater appUpdater;
     MenuItem menuItem,favourite_bhajan_menuItem;
     SearchView searchView;
     RecyclerView recyclerView;
@@ -71,10 +70,15 @@ AdapterView.OnItemSelectedListener listener;
         url_version_code ="https://check-version-number-axvy.shuttle.app/route/version/1";
         url_app_link="https://check-version-number-axvy.shuttle.app/route/1";
         try {
-            versionCodeOfApp = this.getPackageManager().getPackageInfo(this.getPackageName(), PackageManager.GET_ACTIVITIES).versionCode;
+            versionCodeOfApp = this.getPackageManager().getPackageInfo(getPackageName(), PackageManager.GET_ACTIVITIES).versionCode;
         } catch (PackageManager.NameNotFoundException e) {
             throw new RuntimeException(e);
         }
+
+
+            appUpdater=new AppUpdater(this,MainActivity.this) ;
+
+
         recyclerView=findViewById(R.id.recyclerView);
         arrayList=new ArrayList<>();
         nepaliNumbers=new ArrayList<>();
@@ -85,94 +89,17 @@ AdapterView.OnItemSelectedListener listener;
         } catch (JSONException e) {
             throw new RuntimeException(e);
         }
-        if(checkStoragePermission()){
-            usingVolley();
+        if(appUpdater.checkStoragePermission()){
+            appUpdater.usingVolley();
         }
         settingAdapter();
-
 
 
         // Changing Action Bar colour
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xff6200ed));
     }
 
-    public void downloadFile(){
-        DownloadManager downloadManager= (DownloadManager) this.getSystemService(DOWNLOAD_SERVICE);
 
-        Uri uri=Uri.parse(url_app_link);
-        DownloadManager.Request request=new DownloadManager.Request(uri);
-        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
-        request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, "app-release.apk");
-        request.setTitle("app-release.apk");
-        request.setDescription("Downloading file...");
-        downloadManager.enqueue(request);
-
-    }
-
-    public void usingVolley(){
-        requestQueue= Volley.newRequestQueue(getApplicationContext());
-        jsonObject=new JsonObjectRequest(Request.Method.GET, url_version_code, null, new Response.Listener<JSONObject>() {
-            @Override
-            public void onResponse(JSONObject json) {
-
-
-                try {
-                    int i =json.getInt("version_number_id");
-
-                    if(i !=22 && i>versionCodeOfApp){
-                        downloadFile();
-                    }else{
-                    }
-
-                } catch (JSONException e) {
-                    throw new RuntimeException(e);
-                }
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Toast.makeText(MainActivity.this, "Failed fetching data", Toast.LENGTH_SHORT).show();
-            }
-        });
-        requestQueue.add(jsonObject);
-    }
-
-    private boolean checkStoragePermission() {
-        // For Android 6.0 and above, we need to request runtime permission
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-            // Android 11 (API 30) and above
-            if (Environment.isExternalStorageManager()) {
-                // Permission already granted
-                return true;
-
-            } else {
-                // Request the permission
-                Intent intent = new Intent(Settings.ACTION_MANAGE_ALL_FILES_ACCESS_PERMISSION);
-                startActivityForResult(intent, 100);
-
-            }
-        } else {
-            // For Android 10 and below
-            if (ContextCompat.checkSelfPermission(this,
-                    Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED &&
-                    ContextCompat.checkSelfPermission(this,
-                            Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
-                // Permissions already granted
-                return true;
-//
-            } else {
-                // Request permissions
-                ActivityCompat.requestPermissions(this,
-                        new String[]{
-                                Manifest.permission.READ_EXTERNAL_STORAGE,
-                                Manifest.permission.WRITE_EXTERNAL_STORAGE
-                        },
-                        100);
-            }
-        }
-        return false;
-    }
 
 
     private void settingAdapter() {
@@ -303,8 +230,8 @@ AdapterView.OnItemSelectedListener listener;
 //                if_permission_granted_for_app_install=true;
                 Toast.makeText(this, "Permission Granted", Toast.LENGTH_SHORT).show();
 
-                if(checkStoragePermission()){
-                    usingVolley();
+                if(appUpdater.checkStoragePermission()){
+                    appUpdater.usingVolley();
 
                 }
             } else {
@@ -316,6 +243,7 @@ AdapterView.OnItemSelectedListener listener;
         }
 
     }
+
 
 }
 
