@@ -220,7 +220,7 @@ AdapterView.OnItemSelectedListener listener;
 
                 }
             } else {
-                Toast.makeText(this, "Permission Denided, Please grand permission to enable auto update feature", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Permission Denided, Please grand permission to enable auto update feature", Toast.LENGTH_LONG).show();
                 // Permission denied
                 // You might want to show a message why this permission is needed
                 // or disable functionality that requires this permission
