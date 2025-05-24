@@ -8,24 +8,11 @@ import androidx.core.view.MenuItemCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-
-import android.Manifest;
-import android.app.DownloadManager;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
-import android.os.Environment;
-import android.provider.Settings;
 import android.widget.Toast;
 
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.Volley;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -74,9 +61,7 @@ AdapterView.OnItemSelectedListener listener;
         } catch (PackageManager.NameNotFoundException e) {
             throw new RuntimeException(e);
         }
-
-
-            appUpdater=new AppUpdater(this,MainActivity.this) ;
+        appUpdater=new AppUpdater(this,MainActivity.this) ;
 
 
         recyclerView=findViewById(R.id.recyclerView);
@@ -228,7 +213,7 @@ AdapterView.OnItemSelectedListener listener;
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 // Permission granted
 //                if_permission_granted_for_app_install=true;
-                Toast.makeText(this, "Permission Granted", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this, "Permission Granted", Toast.LENGTH_SHORT).show();
 
                 if(appUpdater.checkStoragePermission()){
                     appUpdater.usingVolley();

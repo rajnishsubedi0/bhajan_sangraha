@@ -1,9 +1,9 @@
 package com.rkant.bhajanapp;
 
 import static android.content.Context.DOWNLOAD_SERVICE;
-import static androidx.core.app.ActivityCompat.startActivityForResult;
 
 import android.Manifest;
+import android.app.Dialog;
 import android.app.DownloadManager;
 import android.content.Context;
 import android.content.Intent;
@@ -12,6 +12,10 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
 import android.provider.Settings;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.Window;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.core.app.ActivityCompat;
@@ -32,7 +36,7 @@ public class AppUpdater {
     RequestQueue requestQueue;
     JsonObjectRequest jsonObject;
     Context context;
-
+    TextView negativeButton, positiveButton;
     int versionCodeOfApp=MainActivity.versionCodeOfApp;
     public AppUpdater(Context contex, MainActivity mainActivity) {
         this.mainActivity=mainActivity;
@@ -68,7 +72,8 @@ public class AppUpdater {
                     Toast.makeText(context, ""+versionCodeOfApp, Toast.LENGTH_SHORT).show();
 
                     if(i>versionCodeOfApp){
-                        downloadFile();
+//                        downloadFile();
+                        showCustomDialog();
                     }else{
                     }
 
@@ -121,6 +126,48 @@ public class AppUpdater {
             }
         }
         return false;
+    }
+    public void showCustomDialog() {
+        // Create a Dialog instance
+        final Dialog dialog = new Dialog(mainActivity);
+
+        // Set the custom layout
+        dialog.setContentView(R.layout.dialog_box);
+
+        negativeButton = dialog.findViewById(R.id.dialog_button_negative);
+        positiveButton = dialog.findViewById(R.id.dialog_button_positive);
+
+        // Customize dialog properties
+        // Optional
+        dialog.setCancelable(false); // Prevent dismissing by tapping outside
+
+        // Set button click listeners
+        negativeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Handle negative button click
+                Toast.makeText(mainActivity, "Cancelled", Toast.LENGTH_SHORT).show();
+                dialog.dismiss();
+            }
+        });
+
+        positiveButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Handle positive button click
+                downloadFile();
+                dialog.dismiss();
+            }
+        });
+
+        // Show the dialog
+        dialog.show();
+
+        // Optional: Adjust dialog window size
+        Window window = dialog.getWindow();
+        if (window != null) {
+            window.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        }
     }
 
 
