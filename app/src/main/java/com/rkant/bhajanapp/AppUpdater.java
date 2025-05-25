@@ -69,7 +69,6 @@ public class AppUpdater {
 
                 try {
                     int i =json.getInt("version_number_id");
-                    Toast.makeText(context, ""+versionCodeOfApp, Toast.LENGTH_SHORT).show();
 
                     if(i>versionCodeOfApp){
 //                        downloadFile();
